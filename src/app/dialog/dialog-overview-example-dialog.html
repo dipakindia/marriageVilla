@@ -1,0 +1,12 @@
+<div class="select-relegan-list">
+    <h3><strong>Please choose your community:</strong></h3>
+    <div class="list-box">
+        <ul>
+            <li [ngClass]="{active:val==='1'}" (click) = "setCommunity($event,'1')"><img src="assets/images/icons/hindu.png" title="Hindu" /></li>
+            <li [ngClass]="{active:val==='2'}" (click) = "setCommunity($event,'2')"><img src="assets/images/icons/mushlim.png" title="Islam" /></li>
+            <li [ngClass]="{active:val==='3'}" (click) = "setCommunity($event,'3')"><img src="assets/images/icons/isai.png" title="Christianity" /></li>
+            <li [ngClass]="{active:val==='4'}"(click) = "setCommunity($event,'4')"><img src="assets/images/icons/shikh.png" title="Sikhism" /></li>
+        </ul>
+    </div>
+</div>
+<button class="btn-click next pull-right" (click) = "openSelectTemplateDialog($event)">NEXT</button>
