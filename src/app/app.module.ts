@@ -28,7 +28,7 @@ import { FormContentComponent } from './form-content/form-content.component';
     MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule, MatChipsModule, MatCheckboxModule, MatNativeDateModule, MatDatepickerModule, MatSnackBarModule, MatSelectModule, MatInputModule, MatOptionModule, MatDialogModule, MatTooltipModule, MatSlideToggleModule, MatTabsModule, MatProgressSpinnerModule, MatMenuModule, MatIconModule, MatButtonModule 
   ],
   providers: [],
-  entryComponents: [DialogOverviewExampleDialog,SelectTemplateDialogComponent],
+  entryComponents: [DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
