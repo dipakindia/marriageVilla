@@ -47,6 +47,10 @@ span.icon-title {
 .signup-product-block .ap-product-box.ap-product-box-inactive { opacity: .6; filter: grayscale(100%) blur(2px);}
 .signup-product-block .ap-product-box:hover .ap-product-box-inner{background-color: #dddddd;}
 .signup-product-block .ap-product-box:hover .ap-product-box-inner>div{color: #fff;}
+
+.signup-product-block .ap-product-box.active{margin-top: -8px; opacity: 1; filter: grayscale(0%); transition: all .1s ease-out;}
+.signup-product-block .ap-product-box.active .ap-product-box-inner{background-color: #dddddd;}
+.signup-product-block .ap-product-box.active .ap-product-box-inner>div{color: #fff;}
 /*Signup Step One*/
 
 
