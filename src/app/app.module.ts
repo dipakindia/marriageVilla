@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app-routing';
 import { LoginComponent } from './login/login.component';
 import { ServerErrorComponent } from './server-error/server-error.component';
+// Import your library
+import { SlickModule, SlickComponent } from 'ngx-slick';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { ServerErrorComponent } from './server-error/server-error.component';
     MatInputModule, MatOptionModule, MatDialogModule, MatTooltipModule, MatSlideToggleModule, MatTabsModule, MatProgressSpinnerModule, 
     MatMenuModule, MatIconModule, MatButtonModule,
     RouterModule.forRoot(routes, { useHash: true, enableTracing: false }), 
+    // Specify your library as an import
+    SlickModule.forRoot()
   ],
-  providers: [],
+  providers: [SlickComponent],
   entryComponents: [
     DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent
   ],
