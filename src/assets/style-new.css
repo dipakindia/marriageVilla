@@ -13281,7 +13281,7 @@ body.has-maintenance-modal * {
 
 .panel,
 .c-panel-tip {
-    margin-bottom: 15px;
+   /* margin-bottom: 15px;*/
     counter-increment: panel;
     border-radius: 4px;
     overflow: hidden
