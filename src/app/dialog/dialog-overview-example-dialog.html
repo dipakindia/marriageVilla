@@ -1,4 +1,4 @@
-<div class="select-relegan-list">
+<!-- <div class="select-relegan-list">
     <h3><strong>Please choose your community:</strong></h3>
     <div class="list-box">
         <ul>
@@ -9,4 +9,48 @@
         </ul>
     </div>
 </div>
-<button class="btn-click next pull-right" (click) = "openSelectTemplateDialog($event)">NEXT</button>
+<button class="btn-click next pull-right" (click) = "openSelectTemplateDialog($event)">NEXT</button> -->
+<div class="signup-container">
+    <div class="signup-heading-header">
+        <div class="signup-heading">Sign up for <span>free demo trial</span></div>
+        <div class="signup-heading-seperator"><span></span></div>
+        <div class="signup-heading-title">What type of products do you sell ?</div>
+        <div class="signup-heading-sub-title">Let us know more about your business to bring customized insights about your industry</div>
+    </div>
+    <div class="signup-product-block">
+        
+        <div class="ap-product-box">
+            <a routerLink="/sign-up-two" routerLinkActive="active"  (click)="goToSecondStep(vertical.id)">
+            <div class="ap-product-box-inner">
+                <span class="icon-title">Hindu</span>
+                <div><img src="assets/images/icons/hindu.png" width="70px" title="Hindu" /></div>
+            </div>
+            </a>
+        </div>
+        <div class="ap-product-box">
+            <a routerLink="/sign-up-two" routerLinkActive="active"  (click)="goToSecondStep(vertical.id)">
+            <div class="ap-product-box-inner">
+                <span class="icon-title">Muslim</span>
+                <div><img src="assets/images/icons/mushlim.png" width="70px" title="Hindu" /></div>
+            </div>
+            </a>
+        </div>
+        <div class="ap-product-box">
+            <a routerLink="/sign-up-two" routerLinkActive="active"  (click)="goToSecondStep(vertical.id)">
+            <div class="ap-product-box-inner">
+                <span class="icon-title">Sikhism</span>
+                <div><img src="assets/images/icons/shikh.png" width="70px" title="Sikhism" /></div>
+            </div>
+            </a>
+        </div>
+        <div class="ap-product-box">
+            <a routerLink="/sign-up-two" routerLinkActive="active"  (click)="goToSecondStep(vertical.id)">
+            <div class="ap-product-box-inner">
+                <span class="icon-title">Christianity</span>
+                <div><img src="assets/images/icons/isai.png" width="70px" title="Christianity" /></div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="signup-step-one-bottom"><a routerLink="/signup/step-two-two">I don’t fit into any of this →</a></div>
+  </div>

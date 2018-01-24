@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+        "./assets/css/community-style.css",
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
