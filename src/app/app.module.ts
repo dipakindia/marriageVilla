@@ -18,11 +18,12 @@ import { LoginComponent } from './login/login.component';
 import { ServerErrorComponent } from './server-error/server-error.component';
 // Import your library
 import { SlickModule, SlickComponent } from 'ngx-slick';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
-    FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent
+    FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, FooterComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
