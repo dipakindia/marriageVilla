@@ -1,0 +1,241 @@
+.subtitle  {
+    color: #ecab1a;
+}
+.cta-1, .cta2 {
+    background-color: #ecab1a;
+    padding: 40px 0px;
+}
+
+.b-info-columns-holder .b-info-column {
+    position: relative;
+    min-height: 180px;
+}
+.b-info-column {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.b-info-columns-holder.b-steps-list .b-info-column .info-column-title {
+    font-size: 24px;
+}
+.b-info-column .info-column-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #23272c;
+    font-weight: 600;
+}
+.b-info-column .info-column-text {
+    font-size: 16px;
+    color: #23272c;
+    text-align: center;
+}
+.b-info-columns-holder.b-steps-list .b-info-column .info-column-icon {
+    margin: 0 auto 25px;
+    font-size: 50px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #e8ecef;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-info-columns-holder.b-steps-list .b-info-column .info-column-icon .step-number {
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 11.5px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7px;
+    left: -7px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.b-info-column .info-column-icon .step-number {
+    background: #c30b33;
+}
+.b-info-columns-holder.b-steps-list .b-info-column:before {
+    content: '';
+    display: block;
+    background: url('/assets/images/step-arrow.png') no-repeat;
+    position: absolute;
+    width: 175px;
+    height: 26px;
+    top: 62px;
+    right: -87px;
+}
+.b-info-columns-holder.b-steps-list .nc.b-info-column:before {
+    display: none;
+}
+.info-column-text p {
+    text-align: center;
+}
+/*MENTOR CSS*/
+.section-padding {
+    padding: 15px 0px;
+}
+.carousel-background h1 {
+    color: #fff;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.names_titles {
+    color: #ecab1a;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding: 0 0 10px 0;
+}
+.carousel-background {
+    background: url('/assets/images/home/slide2.jpg') no-repeat center center;
+}
+.carousel-background-black {
+    background: url('/assets/images/pattern_trans_black.png') repeat;
+    padding: 80px 0 80px 40px;
+}
+.page-title {
+    margin-bottom: 40px;
+}
+.text-center {
+    text-align: center;
+}
+.view-all {
+    width: 97%;
+    clear: both;
+    text-align: center;
+}
+.img-sec img {
+    width: 100%;
+}
+.choosetemplates-section .img-sec {
+    position: relative;
+}
+.img-sec, .fig-caption {
+    float: left;
+    width: 100%;
+}
+.choosetemplates-section .templateselected {
+    border: 3px solid #fff;
+}
+.team-info {
+    border: 1px solid rgba(204, 204, 204, 0.33);
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+}
+.template-section{
+    float: left;
+}
+.choosetemplates-section .select-template-btn:hover {
+    background-color: #938e39;
+}
+.choosetemplates-section .select-template-btn {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.img-sec h3 {
+    background: #ecab1a;
+    color: #fff;
+    padding: 15px;
+    margin: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.bold {
+    font-weight: bold;
+}
+.text-center {
+    text-align: center;
+}
+.view-all-btn {
+    display: inline-block;
+    padding: 15px 40px !important;
+    width: auto;
+   /* margin: 40px auto;*/
+    color: #fff !important;
+    border: 1px solid #fff ;
+    text-decoration: none;
+    font-size: 16px;
+}
+.view-all-btn:hover {
+    color: #ecab1a;
+    border: 1px solid #ecab1a;
+}
+.view-all {
+    width: 97%;
+    clear: both;
+    text-align: center;
+}
+
+.horse-car {
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+}
+.horse-car .wheel-one {
+    left: -16px;
+    right: 0;
+    margin: 0 auto;
+    bottom: -5px;
+    position: absolute;
+}
+.horse-car .wheel-two {
+    left: -23px;
+    bottom: -6px;
+    position: absolute;
+}
+
+.signup-newsletter {
+    background: #f6f5ec;
+}
+.signup-newsletter input {
+    height: 50px;
+    width: 270px !important;
+}
+.signup-newsletter button {
+    height: 50px;
+    width: 170px;
+}
+.footer-ct1 {
+    padding: 40px 0;
+    margin-bottom: 2px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
