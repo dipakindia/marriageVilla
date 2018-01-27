@@ -14730,12 +14730,10 @@ label+.form__text {
 .form__input,
 .input-lg,
 .input-md {
-    background-color: #eff1f2;
     -webkit-transition: background .5s linear, border-color .5s linear;
     transition: background .5s linear, border-color .5s linear;
     vertical-align: middle;
     border: 0;
-    border-top: 2px solid #e3e7eb;
     position: relative
 }
 
@@ -36996,16 +36994,26 @@ button,
 textarea {
     margin: 0;
     border: 0;
-    padding: 0;
+    padding: 8px 15px;
     display: inline-block;
     vertical-align: middle;
     white-space: normal;
-    background: none;
+    background: #f1f1f1;
     line-height: 1;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box
+    -moz-box-sizing: border-box;
+    border:1px solid #999;
+    border-radius:2px;
+    width:100%;
+    color:#000;
+}
+.section-content__wrapp {
+    padding: 15px;
+    margin: 15px;
+    background: #fff;
+    font: 15px calibri;
 }
 
 input:focus {
