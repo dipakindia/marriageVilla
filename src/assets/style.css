@@ -261,6 +261,7 @@ ul#main_menu{
 ul#main_menu *{
 	margin:0;
 	padding:0;
+	text-transform: uppercase;
 }
 ul#main_menu li {
 	position:relative;
@@ -274,6 +275,7 @@ ul#main_menu li a{
 	color:#FFFFFF;
 	padding:0 0 0 18px;
 	font-weight:bold;
+	text-transform: uppercase;
 }
 ul#main_menu ul {
 	position:absolute;
@@ -283,6 +285,7 @@ ul#main_menu ul {
 	display:none;
 	opacity:0;
 	list-style:none;
+	text-transform: uppercase;
 }
 ul#main_menu ul li {
 	position:relative;
@@ -292,6 +295,7 @@ ul#main_menu ul li {
 	height:50px;
 	line-height:50px;
 	text-align:left;
+	text-transform: uppercase;
 }
 ul#main_menu ul li a {
 	display:block;
@@ -300,6 +304,7 @@ ul#main_menu ul li a {
 	color:#434343;
 	height:50px;
 	line-height:50px;
+	text-transform: uppercase !important;
 }
 ul#main_menu ul li a:hover {
 	background-color:#e5e5e5;

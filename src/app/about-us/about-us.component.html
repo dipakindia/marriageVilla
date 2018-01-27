@@ -1,3 +1,65 @@
-<p>
-  about-us works!
-</p>
+<!--BANNER START-->
+<div id="about_banner">
+    <div class="row">
+        <div  class="landing__welcome landing__welcome--blue">
+            <div class="container">
+               <div class="col-md-12">
+                <header class="header">                  
+                        <h1 class="h-strong">About us</h1>
+                        <h2 class="h3 d">Who we are and what we do...</h2>                  
+                </header>
+                </div>
+            </div>
+          </div>
+      
+    </div>
+
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when
+                        looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution
+                        of letters.
+                    </p>
+                    <p>
+                        Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their infancy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section-padding">
+        <div class="container">            
+                <div class="page-title text-center">
+                    <h1>Our Team</h1>
+                    <hr class="pg-titl-bdr-btm"/>
+                </div>  
+
+                <div class="row">
+                    <div class="col-sm-6" *ngFor="let team of teamMember;index as i">
+                        <div class="box">                      
+                            <div class="even" *ngIf="i%2==0"><img src="{{team.team_img}}"></div>
+                            <div class="service-text">
+                                <h3>{{team.team_name}}
+                                    <small >{{team.team_designation}}</small>
+                                </h3>
+                              <p>{{team.team_desc}} </p>
+                            </div>
+                            <div class="odd" *ngIf="i%2!=0" ><img src="{{team.team_img}}"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+</div>
+<!--BANNER END-->
