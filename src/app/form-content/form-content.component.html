@@ -1,4 +1,240 @@
-<div class="l-content l-col" style="width: 1049px;position: relative;left: 300px;">
-          
-  </div>
-  
+<div class="l-content l-col" style="width: 1049px;position: relative;left: 300px; background:#ddd">
+    <form novalidate  [formGroup]="myform" (ngSubmit)="onSubmit()">
+      <pre><br/>{{myform.value | json}}</pre>
+    <div class="section-content__wrapp">
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Personel Details: </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+
+                <div class="col-sm-6">
+                  <label>Name</label>           
+                    <div class="form__input">
+                      <input type="text" class="form-control" formControlName="name" type="text" placeholder="Enter your name" required />
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label>Date of Birth</label>
+                  <div class="form__input"><input  type="text"  formControlName = "dob" placeholder="Enter Your Date of Birth" /></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Birth Place</label>
+                  <div class="form__input"><input type="text"  formControlName = "birth_palace" required placeholder="Enter your birth Palace"/></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Birth Time</label>
+                  <div class="form__input"><input type="text"  formControlName = "birth_time" class="form-control" placeholder="Birth time"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Physical Attributes </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                <div class="col-sm-4">
+                  <label>Height</label>
+                  <div class="form__input"><input type="text" formControlName = "height" class="form-control" placeholder="Birth time"></div>
+                </div>
+                <div class="col-sm-4">
+                  <label>Weight</label>
+                  <div class="form__input"><input type="text"  formControlName = "weight" class="form-control" placeholder="weight"></div>
+                </div>
+                <div class="col-sm-4">
+                  <label>Complexion</label>
+                  <div class="form__input"><input type="text" formControlName = "complexion" class="form-control" placeholder="complexion"></div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Qualification </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                <div class="col-sm-6">
+                  <label>Education</label>
+                  <div class="form__input"><input type="text" formControlName = "education" class="form-control" placeholder="education"></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Profession</label>
+                  <div class="form__input"><input type="text" formControlName = "profession" class="form-control" placeholder="profession"></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Currently working</label>
+                  <div class="form__input"><input type="text" formControlName = "currently_working" class="form-control" placeholder="currently working"></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Hobbies</label>
+                  <div class="form__input"><input type="text" formControlName = "hobbies" class="form-control" placeholder="hobbies"></div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Religion: </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                <div class="col-sm-6">
+                  <label>Caste</label>
+                  <div class="form__input"><input type="text" formControlName = "cast" class="form-control" placeholder="caste"></div>
+                </div>
+               
+                <div class="col-sm-6">
+                    <label>Sub Caste</label>
+                    <div class="form__input"><input type="text" formControlName = "sub_cast" class="form-control" placeholder="sub caste"></div>
+                  </div>
+                  <div class="col-sm-6">
+                      <label>Gotra</label>
+                      <div class="form__input"><input type="text" formControlName = "gotra" class="form-control" placeholder="gotra"></div>
+                    </div>
+                  <div class="col-sm-6">
+                      <label>Maththab</label>
+                      <div class="form__input"><input type="text" formControlName = "maththab" class="form-control" placeholder="maththab"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Speak Urdu</label>
+                        <div class="form__input"><input type="text" formControlName = "speak_urdu" class="form-control" placeholder="Birth time"></div>
+                      </div>
+                      <div class="col-sm-6">
+                          <label>Namaz</label>
+                          <div class="form__input"><input type="text" formControlName = "namaz" class="form-control" placeholder="Birth time"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Fasting</label>
+                            <div class="form__input"><input type="text" formControlName = "fasting" class="form-control" placeholder="Birth time"></div>
+                          </div>
+                          <div class="col-sm-6">
+                              <label>Hijab after marriage</label>
+                              <div class="form__input"><input type="text" formControlName = "hijab_after_marriage" class="form-control" placeholder="Birth time"></div>
+                          </div>
+                          <div class="col-sm-6">
+                                <label>Quran</label>
+                                <div class="form__input"><input type="text" formControlName = "quran" class="form-control" placeholder="Birth time"></div>
+                          </div>  
+                              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Occupation: </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                <div class="col-sm-6">
+                  <label>Occupation</label>
+                  <div class="form__input"><input type="text" formControlName = "occupation" class="form-control" placeholder="Birth time"></div>
+                </div>
+                                              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Family Details: </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                <div class="col-sm-6">
+                  <label>Father</label>
+                  <div class="form__input"><input type="text" formControlName = "father" class="form-control" placeholder="Birth time"></div>
+                </div>
+                <div class="col-sm-6">
+                  <label>Mother</label>
+                  <div class="form__input"><input type="text" formControlName = "mother" class="form-control" placeholder="Birth time"></div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label>Brother</label>
+                  <div class="form__input"><input type="text" formControlName = "brother" class="form-control" placeholder="Birth time"></div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label>Sister</label>
+                  <div class="form__input"><input type="text" formControlName = "sister" class="form-control" placeholder="Birth time"></div>
+                </div>
+
+                              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--white-line">
+        <div class="panel__heading"> Contact Details: </div>
+        <div class="panel__body">
+          <div class="form form--labeled form--lowercase form--big-padding">
+            <div class="form__row">
+              <div class="l-row">
+                  <div class="col-sm-6">
+                      <label>Phone No.</label>
+                      <div class="form__input"><input type="text" formControlName = "phone_no" class="form-control" placeholder="Birth time"></div>
+                    </div>
+                <div class="col-sm-6">
+                  <label>Email</label>
+                  <div class="form__input"><input type="text" formControlName = "email" class="form-control" placeholder="Birth time"></div>
+                </div>
+
+                                              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--white-line">
+          <div class="panel__heading"> Beliefs: </div>
+          <div class="panel__body">
+            <div class="form form--labeled form--lowercase form--big-padding">
+              <div class="form__row">
+                <div class="l-row">
+                    <div class="col-sm-6">
+                        <label>Name of The Church</label>
+                        <div class="form__input"><input type="text" formControlName = "name_of_the_church" class="form-control" placeholder="Birth time"></div>
+                      </div>
+                  <div class="col-sm-6">
+                    <label>Caste Preference</label>
+                    <div class="form__input"><input type="text" formControlName = "caste_preference" class="form-control" placeholder="Birth time"></div>
+                  </div>
+
+                                                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+</div>
+<button type="submit" class="aup-red-button">Sign in</button>
+</form>
+</div>

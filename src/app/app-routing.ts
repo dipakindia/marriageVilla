@@ -1,3 +1,4 @@
+import { AddPersonalInfoComponent } from './add-personal-info/add-personal-info.component';
 import { BiodataComponent } from './biodata/biodata.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -13,7 +14,7 @@ import { BlogComponent } from './blog/blog.component';
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
+    {path: 'home', component: AddPersonalInfoComponent},
     {path: 'my-biodata', component: BiodataComponent},
     {path: 'about-us', component: AboutUsComponent},
     {path: 'blog', component: BlogComponent},
