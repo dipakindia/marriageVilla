@@ -228,12 +228,52 @@ export class FormContentComponent implements OnInit {
     if (this.myform.valid) {
       //alert(JSON.stringify(this.myform.value) + "Form Submitted!");
       //this.loading = true;
-     var data = {
-        email: this.myform.value.workEmail, 
-        password: this.myform.value.userPassword,
-        name: this.myform.value.fullName,
-        phone: this.myform.value.mobileNumber
+    var formData = this.myform.value;
+    var data = {
+      'personel_details': {
+        'email': formData.name,
+        'date_of_birth': formData.dob,
+        'birth_palace': formData.birth_palace,
+        'birth_time': formData.birth_time
+      },
+      "physical_attributes":{
+        "height": formData.height,
+        "weight": formData.weight,
+        "complexion": formData.comlexion
+      },
+      "qualification": {
+        "education": formData.education,
+        "profession": formData.profession,
+        "currently_working": formData.currently_working,
+        "hobbies": formData.hobbies
+      },
+      "religion":{
+        "cast": formData.cast,
+        "sub_cast": formData.sub_cast,
+        "gotra": formData.gotra,
+        "maththab": formData.maththab,
+        "speak_urdu": formData.speak_urdu,
+        "namaz": formData.namaz,
+        "fasting": formData.fasting,
+        "hijab_after_marriage": formData.hijab_after_marriage,
+        "quran": formData.quran
+      },
+      "occupation":formData.occupation,
+      "family_details":{
+        "father": formData.father,
+        "mother": formData.mother,
+        "sister": formData.sister,
+        "brother": formData.brother
+      },
+      "contact_details":{
+        "phone_no": formData.phone_no,
+        "email": formData.email
+      },
+      "beliefs":{
+        "name_of_the_church": formData.name_of_the_church,
+        "caste_preference": formData.caste_preference
       }
+    }
       console.log(data)
     }
   }

@@ -1,0 +1,131 @@
+
+.avatar-image-container img{height:70px;width:70px;overflow:hidden;float:left;margin-right:20px;max-width:100%!important}
+.post-info {margin-bottom:15px;margin-right:10px;color:#8c919b;font-size:11px;font-weight:600;border-top: 1px solid #F1F4F9; border-bottom: 1px solid #F1F4F9; padding: 5px; background: #FBFBFB;}
+.post-info a {display:inline;background:transparent;color:#8c919b;padding:5px;padding-left:0;margin-bottom:10px;transition:all .3s ease-out;}
+.post-info a:hover {background:transparent;}
+
+.post {background: #fff; color: #333; margin-left: 0; padding-bottom: 30px; transition: all 0.3s linear; padding: 20px;padding-top:10px;border: 1px solid rgb(230, 230, 230);}
+
+
+.post-outer { width: 32.1%;margin-right: 10px;float:left;margin-bottom:10px;}
+.post {height:225px;}
+.post-body {color:rgba(51, 51, 51, 0.81);font-size:14px;font-weight:500;text-overflow:ellipsis;width: auto;margin-bottom: 15px;}
+h2.post-title, h1.post-title {font-size:17px;font-weight:900;text-transform:capitalize;padding-bottom:0;text-align:-webkit-left;border-bottom:none;border-top:none;clear:initial;letter-spacing: 0.4px;}
+h2.post-title:hover, h1.post-title:hover {color:#f56954;}
+h2.post-title a, h1.post-title a, h2.post-title, h1.post-title {color:#3b5998;z-index:0;-webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; margin: 0 auto;line-height: 1.3;margin-bottom:3px;}
+h2.post-title a:hover, h1.post-title a:hover {color:#2259CC!important;}
+
+.post-image {margin:0;z-index:1;padding:0;float:left;margin-right:20px;background:#333;overflow:hidden;}
+.post-image img {width:115px;height:105px;transition: 0.9s;-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;transition: opacity 0.35s, transform 0.35s;}
+.post-image img:hover {opacity: 0.7;-webkit-transform: scale3d(1.05,1.05,1);transform: scale3d(1.05,1.05,1);;}
+.readmore2 {float:left;font-size: 12px; color:#333!important;font-weight: 300;margin-right:5px;transition: 0.4s;font-family: 'Merriweather', serif;text-transform: uppercase;letter-spacing: 0.2em;}
+.readmore2:hover {color:#333!important;transition: 0.9s;}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+
+
+@media screen and (max-width:1066px) {
+.wrapper {width:100%}
+#search-bar {width:30%}
+
+
+.post-outer {width:48.5%}
+
+}
+
+@media screen and (max-width:960px) {
+.post {margin-bottom:0;padding: 10px!important;}
+h2.post-title a, h1.post-title a, h2.post-title, h1.post-title {margin-top:0;line-height:1.3;font-size: 20px!important;}
+.bwrapsite-content{width:100%}
+.content-area {float:none;width:initial!important; margin: 5px;}
+.sidebar-area {width:initial!important;margin:5px!important;float:none;}
+#header-ad {height:auto;}
+ul#relpost_img_sum li {width:100%!important;}
+.top-social {display:none;}
+#logo {margin-left:20px;}
+input#sq {width:initial;}
+#search-bar {width:40%}
+
+}
+
+@media only screen and (max-width:768px){
+#header {text-align:center;max-width:initial;}
+.post-body {width:auto!important;}
+
+
+.post-outer {width:48.1%;margin-bottom: 10px;}
+.post {height:215px;}
+
+ .post-info {font-size:9px;}
+
+}
+
+
+@media only screen and (max-width:640px){
+.post-body {width:auto!important;line-height: 1.4; font-size: 11px;margin-bottom:0}
+.related-post-style-2 li {width: initial!important; padding: 5px!important;}
+.ad160 {display:none;}
+}
+
+
+@media only screen and (max-width:480px){
+#header {text-align:center;}
+#search-bar {width:280px;}
+input#sq {width:initial;}
+.header-social {float:initial;}
+.post-image {float:none;margin-right:0;margin-bottom:8px}
+.post-image img {width:100%!important;height:190px;}
+.post-info {margin:0;font-size: 10px;margin-bottom: 8px;}
+.post-body {font-size: 13px;}
+.post-outer {width:100%;height:auto;}
+
+
+.post {height:auto;}
+
+.author-info, .home-link, .comments .comments-content .datetime a {display:none;}
+.readmore2 {width:95%;text-align:center;}
+.pager-left, .pager-right {width:89%!important;}
+#blog-pager {overflow:hidden!important;}
+.pager-left {margin-bottom:5px!important;}
+.sharepost li {float:none!important;width:initial!important;}
+}
+
+@media screen and (max-width:320px){
+.showpage a,.showpageNum a,.showpagePoint,.showpageOf{padding:5px 8px}
+}
