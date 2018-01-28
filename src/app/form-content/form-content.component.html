@@ -1,5 +1,10 @@
-<div class="l-content l-col" style="width: 1049px;position: relative;left: 300px; background:#ddd">
-    <form novalidate  [formGroup]="myform" >
+<div *ngIf="loading"  class="l-content l-col" style="width: 1000px;position: relative;left: 300px; text-align:center;padding-top:100px; background:#fff" >
+    <img src="assets/images/loading.gif" alt="Loading.." width="100px" />
+      <br /><br />
+    Loading...</div>
+<div class="l-content l-col" style="width: 1000px;position: relative;left: 300px; background:#ddd" *ngIf="!loading">
+
+    <form novalidate  [formGroup]="myform"  >
     <!--   <pre><br/>{{myform.value | json}}</pre> -->
     <div class="section-content__wrapp" id="personal_details">
       <div class="panel panel--white-line">
@@ -248,5 +253,5 @@
 </div>
 
 </form>
-<button type="submit" class="aup-red-button" (click) = "onSubmit()">Sign in</button>
+<button type="submit" class="aup-red-button" style="width:120px" (click) = "onSubmit()">Next</button>
 </div>
