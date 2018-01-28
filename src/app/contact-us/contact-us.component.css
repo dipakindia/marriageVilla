@@ -94,7 +94,7 @@ h3{
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 430px;
+    width: 360px;
     -moz-box-sizing: border-box;
 }
 .pg-titl-bdr-btm{
@@ -113,7 +113,7 @@ h3{
 .subscribe-section {
     border: 1px solid  #eeaaff;
     padding: 31px;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 }
 button, html [type="button"], [type="reset"], [type="submit"] {
     -webkit-appearance: button;

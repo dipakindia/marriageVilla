@@ -21,41 +21,40 @@
                 <hr class="pg-titl-bdr-btm"/>
                 <p>There are many variations of passages of Lorem Ipsum available, slightly believable.</p>
                   <div class="form-sec1">
-                      <form>                                    
+                      <form novalidate  [formGroup]="myform" (ngSubmit)="onSubmit()">  
+                            <pre><br/>{{myform.value | json}}</pre>                                  
                           <div class="form-group">
-                              <input type="text" class="form-control no-border" name="first_name" id="first_name"
-                                     placeholder="First Name" data-msg="Please enter first name"/>
+                              <input type="text" formControlName="fname" class="form-control no-border" 
+                                     placeholder="First Name" required>
                              
                           </div>
                           <div class="form-group">
-                              <input type="text" class="form-control no-border" name="last_name" id="last_name"
-                                     placeholder="Last Name" data-msg="Please enter last name"/>
+                              <input type="text" class="form-control no-border" formControlName="lname"
+                                     placeholder="Last Name" />
                             
                           </div>
                           <div class="form-group">
-                              <input type="email" class="form-control no-border" name="email" id="email"
-                                     placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+                              <input type="email" class="form-control no-border" formControlName="email"
+                                     placeholder="Your Email" data-rule="email"/>
                              
                           </div>
                           <div class="form-group">
-                              <input type="text" class="form-control no-border" name="phone_no" id="phone_no"
-                                     placeholder="Phone Number" data-msg="Please enter phone name"/>
+                              <input type="text" class="form-control no-border" formControlName="phone"  placeholder="Phone Number"/>
                               
                           </div>
                           <div class="form-group">
-                              <input type="text" class="form-control no-border" name="company" id="company"
-                                     placeholder="Company" data-msg="Please enter company name"/>
+                              <input type="text" class="form-control no-border" formControlName="company_name"
+                                     placeholder="Company"/>
                              
                           </div>
                           <div class="form-group">
-                              <input type="text" class="form-control no-border" name="website" id="website"
-                                     placeholder="Website" data-msg="Please enter website name"/>
+                              <input type="text" class="form-control no-border" formControlName="website"
+                                     placeholder="Website" >
                             
                           </div>
                           <div class="form-group">
-                              <textarea class="form-control no-border" name="anything" id="anything"
-                                     placeholder="Where you find us on Google" data-msg="Please enter Where you find us on Google"></textarea>
-                             
+                              <textarea class="form-control no-border" formControlName="find_us"
+                                     placeholder="Where you find us on Google" ></textarea>                             
                           </div>
                         
                           <div class="form-group">
@@ -97,8 +96,7 @@
                                 <div class="validation"></div>
                             </div>
                             <div class="form-group">
-                                <button class="button-medium" id="contact-submit" type="submit" name="contact">Subscribe
-                                </button>
+                                <button class="button-medium" type="submit" name="contact">Submit </button>
                             </div>
                         </form>
                     </div>

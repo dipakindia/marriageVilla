@@ -27,12 +27,13 @@ import { BiodataComponent } from './biodata/biodata.component';
 import { NewsLetterComponent } from './news-letter/news-letter.component';
 import { ModelFormComponent } from './model-form';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent, 
-    NewsLetterComponent, ModelFormComponent
+    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
