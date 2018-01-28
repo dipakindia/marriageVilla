@@ -1,3 +1,23 @@
-<p>
-  team works!
-</p>
+<section id="template-heading"  class="blue">
+  <h2>Choose your Bio Data template:</h2>
+  <hr style="color:#fff;width: 250px;height: 2px;text-align:  center;margin: 0 auto;" />
+</section>
+<section id="features" class="blue">
+    <div class="content">
+      <div class="slider center">
+
+          <div *ngFor="let cm of getTemplateList;index as j">
+          <h3 (click) = "selectTemplate($event,j)">
+            <img src="assets/images/templates/{{cm.caste}}/{{cm.template}}.jpg" alt="{{cm.caste}}" width="250px" />
+            <div class="temlate-selected" *ngIf="select === j">
+              <button class="select-template" (click) = "goToForm()" >Selected</button>
+              <button class="zoom" (click) = "getZoomImage($event,cm.caste,cm.template)"><i class="fa fa-search-plus fa-fw"></i></button>
+              </div>
+          </h3>
+          <h4>{{cm.caste}}</h4>
+          </div>
+      </div>
+      
+    </div>
+  </section>
+  

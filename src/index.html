@@ -11,7 +11,8 @@
 <link rel="stylesheet" type="text/css" media="all" href="assets/colors/green.css" />
 <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/style-slick.css"/>
 <link href='assets/style-new.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -30,32 +31,7 @@
 			speed: 1000,
 			arrows: false
     });
-    
-    $('.center').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
+
 	});
 </script>
 
@@ -81,9 +57,39 @@ var $ = jQuery.noConflict();
 
   });
 </script>
+	
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
-<script src="https://unpkg.com/slick-carousel@1.6.0/slick/slick.js"></script>
+		<script type="text/javascript" src="assets/js/slick.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		 $('.center').slick({
+        centerMode: true,
+        infinite: true,
+        centerPadding: '60px',
+        slidesToShow: 5,
+        speed: 500,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }],
+        prevArrow: '<div class="c-tunnel__carousel-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+      nextArrow: '<div class="c-tunnel__carousel-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>'
+    });
+	})
+		</script>
+
 </body>
 </html>

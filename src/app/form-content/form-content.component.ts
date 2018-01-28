@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-form-content',
@@ -41,7 +42,7 @@ export class FormContentComponent implements OnInit {
   caste_preference:FormControl; 
 
   public verifyEmail:any;
-  constructor(fb: FormBuilder) {
+  constructor(private data_service:DataService, fb: FormBuilder) {
     this.options = fb.group({
       hideRequired: false,
       floatLabel: 'auto',
@@ -225,13 +226,14 @@ export class FormContentComponent implements OnInit {
 
 
   onSubmit() {
-    if (this.myform.valid) {
-      //alert(JSON.stringify(this.myform.value) + "Form Submitted!");
+   // alert(JSON.stringify(this.myform.value) + "Form Submitted!");
+   // if (this.myform.valid) {
+     // alert(JSON.stringify(this.myform.value) + "Form Submitted!");
       //this.loading = true;
     var formData = this.myform.value;
     var data = {
       'personel_details': {
-        'email': formData.name,
+        'name': formData.name,
         'date_of_birth': formData.dob,
         'birth_palace': formData.birth_palace,
         'birth_time': formData.birth_time
@@ -274,7 +276,8 @@ export class FormContentComponent implements OnInit {
         "caste_preference": formData.caste_preference
       }
     }
+    this.data_service.addBioDataInformation(data);
       console.log(data)
-    }
+   // }
   }
 }

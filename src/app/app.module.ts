@@ -1,3 +1,4 @@
+import { DataService } from './data.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 
@@ -27,12 +28,15 @@ import { BiodataComponent } from './biodata/biodata.component';
 import { NewsLetterComponent } from './news-letter/news-letter.component';
 import { ModelFormComponent } from './model-form';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { PreviewTemplateComponent } from './preview-template/preview-template.component';
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent, 
-    NewsLetterComponent, ModelFormComponent
+    NewsLetterComponent, ModelFormComponent, PreviewTemplateComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
@@ -41,13 +45,14 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
     MatMenuModule, MatIconModule, MatButtonModule,
     FormsModule,    //added here too
     ReactiveFormsModule, //added here too,
+    HttpClientModule,
     RouterModule.forRoot(routes, { useHash: true, enableTracing: false }), 
     // Specify your library as an import
     SlickModule.forRoot()
   ],
-  providers: [SlickComponent,FormBuilder],
+  providers: [SlickComponent,FormBuilder,DataService,HttpClient],
   entryComponents: [
-    DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent
+    DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent,PreviewTemplateComponent
   ],
   bootstrap: [AppComponent]
 })

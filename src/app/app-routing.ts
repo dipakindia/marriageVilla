@@ -14,12 +14,12 @@ import { BlogComponent } from './blog/blog.component';
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
-    {path: 'home', component: AddPersonalInfoComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'my-biodata', component: BiodataComponent},
     {path: 'about-us', component: AboutUsComponent},
     {path: 'blog', component: BlogComponent},
     {path: 'contact-us', component: ContactUsComponent},
-    {path: 'team', component: TeamComponent},
+    {path: 'select-template', component: TeamComponent},
     {path: '504', component: ServerErrorComponent},
     {path: '**', component: PageNotFoundComponent}
 ];

@@ -1,5 +1,5 @@
 <div class="l-content l-col" style="width: 1049px;position: relative;left: 300px; background:#ddd">
-    <form novalidate  [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <form novalidate  [formGroup]="myform" >
       <pre><br/>{{myform.value | json}}</pre>
     <div class="section-content__wrapp">
       <div class="panel panel--white-line">
@@ -235,6 +235,7 @@
 
 
 </div>
-<button type="submit" class="aup-red-button">Sign in</button>
+
 </form>
+<button type="submit" class="aup-red-button" (click) = "onSubmit()">Sign in</button>
 </div>
