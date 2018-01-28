@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '60%',
-      height: '70%',
+      height: '75%',
       data: { name: this.name, animal: this.animal }
     });
 

@@ -18,7 +18,7 @@ span.icon-title {
 .signup-heading-header{display:block; min-height: auto;}
 .signup-heading{ font-family:latomedium; font-size:22px; color: #333333; min-height: auto;}
 .signup-heading span{color: #e52e39;}
-.signup-heading-seperator{display:flex; flex-direction: column; margin:35px 0; min-height: auto;}
+.signup-heading-seperator{display:flex; flex-direction: column; margin:15px 0; min-height: auto;}
 .signup-heading-seperator span{max-width:60px; margin:auto; background-color: #000; height:3px; width:100%; min-height: auto;} 
 .signup-heading-title{ font-family:latomedium; font-size:28px; color: #000000; margin:0 0 30px;}
 .signup-heading-sub-title{font-size:17px; color: #666666; margin:0 0 30px;}
