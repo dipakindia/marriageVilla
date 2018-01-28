@@ -1,4 +1,3 @@
-
 .landing__welcome--blue {
     color:#fff;
     content: '';
@@ -27,29 +26,11 @@
     font-size: 22px;
     color: #fff;
 }
-.section-padding {
-    padding: 15px 0px;
+.blog-page-area{
+    margin:0 auto;
+    width:80%;
+    padding:20px;
 }
-.page-title {
-    margin-bottom: 40px;
-}
-.text-center {
-    text-align: center;
-}
-.pg-titl-bdr-btm {
-    width: 100px;
-    height: 3px;
-    background-color: #F97D38;
-}
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
-}
-.box {
-    height: auto;
-    background: #eee;
-    padding: 20px;
-    margin-bottom: 30px;
+.snippets{
+margin: 10px 0;
 }

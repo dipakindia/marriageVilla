@@ -31,12 +31,14 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { PreviewTemplateComponent } from './preview-template/preview-template.component';
+import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
+
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
-    FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent, 
-    NewsLetterComponent, ModelFormComponent, PreviewTemplateComponent
+    FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
+    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,

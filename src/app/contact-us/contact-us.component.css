@@ -1,0 +1,133 @@
+.landing__welcome--blue {
+    color:#fff;
+    content: '';
+    background: url('/assets/images/about-banner.jpg' );    
+    width:100%;
+    height: 350px;
+   
+}
+.landing__welcome--blue a, .landing__welcome--blue {
+    color: #fff;
+}
+.landing__welcome {
+    text-align: center; 
+    padding: 100px 0 80px 0;
+}
+.landing .header {
+    text-align: center;
+}
+
+.h-strong {
+    font-weight: 600;
+    margin-top: 47px;
+    color: #fff;
+}
+ .h3 {
+    font-size: 22px;
+    color: #fff;
+}
+
+.main-navigation {
+  position: relative;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+}
+.top30 {
+    margin-top: 30px;
+}
+
+
+.section-padding {
+    padding: 15px 0px;
+}
+.validation {
+    color: red;
+    display: none;
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.contact .jumbotron {
+    padding: 15px;
+    text-align: right;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.contact .jumbotron p {
+    font-size: 19px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: #B70E31;
+    opacity: 0.8;
+    display: none;
+}
+
+
+ .section-contact{
+    width : 80%;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+        
+ }
+h3{
+    padding:0 0 8px 0px;
+}
+ input, select, button, textarea {
+    margin: 9px;
+    border: 1px solid lightgray;
+    padding: 7px;
+    display: inline-block;
+    background: #f4f4f4;
+    border-radius: 8px 8px;
+    vertical-align: middle;
+    white-space: normal;
+    line-height: 1;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 360px;
+    -moz-box-sizing: border-box;
+}
+.pg-titl-bdr-btm{
+    width: 300px;
+    height: 1px;
+    background-color: #F97D38;
+    padding: 0px !important;
+    margin: 12px 0;
+}
+.form-sec1{
+    border: 1px solid #eeaaff;
+    padding: 10px;
+    width: 100%;
+    margin:5px;
+}
+.subscribe-section {
+    border: 1px solid  #eeaaff;
+    padding: 31px;
+    margin-bottom: 30px;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    background: skyblue !important;
+    border: 1px solid darkgray !important;
+    padding: 9px !important;
+}
+.box{
+    background: #dddd;
+    padding: 20px;
+    margin: 10px;
+}
+
+.heding-s{
+    font-size: 22px;
+    margin: 10px 0;
+}

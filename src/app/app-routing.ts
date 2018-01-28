@@ -10,6 +10,8 @@ import { Routes, CanActivate } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
+
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
@@ -18,6 +20,7 @@ export const routes: Routes = [
     {path: 'my-biodata', component: BiodataComponent},
     {path: 'about-us', component: AboutUsComponent},
     {path: 'blog', component: BlogComponent},
+    { path: 'blog/:id', component: BlogDetailPageComponent},
     {path: 'contact-us', component: ContactUsComponent},
     {path: 'select-template', component: TeamComponent},
     {path: '504', component: ServerErrorComponent},

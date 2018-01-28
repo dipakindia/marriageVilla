@@ -1,3 +1,113 @@
-<p>
-  contact-us works!
-</p>
+<!--BANNER START-->
+<div id="about_banner">
+    <div class="row">
+        <div  class="landing__welcome landing__welcome--blue">
+            <div class="container">
+               <div class="col-md-12">
+                <header class="header">                  
+                        <h1 class="h-strong">Contact us</h1>
+                        <h2 class="h3 d">Who we are and what we do...</h2>                  
+                </header>
+                </div>
+            </div>
+          </div>
+    </div>
+    </div>  
+
+    <div class="row section-contact">
+        <div class="col-sm-6 sec-1">
+            <div class="box">  
+                <h3>Create Your Resume </h3>
+                <hr class="pg-titl-bdr-btm"/>
+                <p>There are many variations of passages of Lorem Ipsum available, slightly believable.</p>
+                  <div class="form-sec1">
+                      <form novalidate  [formGroup]="myform" (ngSubmit)="onSubmit()">  
+                            <pre><br/>{{myform.value | json}}</pre>                                  
+                          <div class="form-group">
+                              <input type="text" formControlName="fname" class="form-control no-border" 
+                                     placeholder="First Name" required>
+                             
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control no-border" formControlName="lname"
+                                     placeholder="Last Name" />
+                            
+                          </div>
+                          <div class="form-group">
+                              <input type="email" class="form-control no-border" formControlName="email"
+                                     placeholder="Your Email" data-rule="email"/>
+                             
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control no-border" formControlName="phone"  placeholder="Phone Number"/>
+                              
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control no-border" formControlName="company_name"
+                                     placeholder="Company"/>
+                             
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control no-border" formControlName="website"
+                                     placeholder="Website" >
+                            
+                          </div>
+                          <div class="form-group">
+                              <textarea class="form-control no-border" formControlName="find_us"
+                                     placeholder="Where you find us on Google" ></textarea>                             
+                          </div>
+                        
+                          <div class="form-group">
+                              <button class="button-medium" id="contact-submit" type="submit" name="contact">Subscribe
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="box">                 
+                <div class="jumbotron">
+                    <h3 class="display-3 uppercase">Reach Us</h3>
+                    <hr class="pg-titl-bdr-btm"/>
+                    <p class="lead"><i class="fa fa-phone" aria-hidden="true"></i> +91 999999999 </p>
+                    <p class="lead"><i class="fa fa-envelope" aria-hidden="true"></i> abc@gmail.com </p>
+                    <p class="lead">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <strong>Marriage Villa</strong>
+                        <br/>1355 Market St, Suite 900
+                        <br/>San Francisco, CA 94103
+                        <br/><abbr title="Phone">Phone:</abbr> +91 999999999
+
+                    </p>
+                </div>
+                <div class="section-padding">
+                    <h3 class="heding-s">Socialise with us</h3>
+                </div>
+
+                <div class="section-padding subscribe-section">
+                    <h3 class="heding-s">Recieve effective tips to grow your business</h3>
+                    <a href="#">Just once in a week, we hate spam as well</a>
+                    <div class="form-sec2">
+                        <form action="" method="post" role="form" class="contactForm">
+                            <div class="form-group">
+                                <input type="email" class="form-control no-border" name="email" id="email"
+                                       placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <button class="button-medium" type="submit" name="contact">Submit </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+
+
+
+    <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14015.979005818366!2d77.3613157868385!3d28.56992032130983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce58cda3bc64d%3A0x2e9995b44137c369!2sNeo+Hospital!5e0!3m2!1sen!2sin!4v1511894015240" width="100%" height="350" frameborder="0" style="border:0; margin-top: 0px;" ></iframe>
+    </div>
