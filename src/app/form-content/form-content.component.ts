@@ -1,3 +1,5 @@
+import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 import { Component, OnInit,Input } from '@angular/core';
 import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import { DataService } from '../data.service';
@@ -16,7 +18,7 @@ export class FormContentComponent implements OnInit {
   birth_time:FormControl;
   height:FormControl;
   weight:FormControl;
-
+  public loading:boolean = false;
   complexion:FormControl;
   education:FormControl;
   profession:FormControl;
@@ -42,7 +44,7 @@ export class FormContentComponent implements OnInit {
   caste_preference:FormControl; 
 
   public verifyEmail:any;
-  constructor(private data_service:DataService, fb: FormBuilder) {
+  constructor(private data_service:DataService, fb: FormBuilder,public router:Router,public dialog: MatDialog) {
     this.options = fb.group({
       hideRequired: false,
       floatLabel: 'auto',
@@ -276,8 +278,15 @@ export class FormContentComponent implements OnInit {
         "caste_preference": formData.caste_preference
       }
     }
-    this.data_service.addBioDataInformation(data);
-      console.log(data)
-   // }
-  }
+    this.loading = true;
+    this.data_service.addBioDataInformation(data).subscribe((res: Response) => {
+      if(res.status == 1){
+        this.dialog.closeAll();
+        this.router.navigate(['/payment']);
+      }else{
+        this.loading = false;
+      }
+      return res;
+  });
+}
 }

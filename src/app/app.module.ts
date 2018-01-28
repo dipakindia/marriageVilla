@@ -32,13 +32,14 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { PreviewTemplateComponent } from './preview-template/preview-template.component';
 import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
+import { PaymentTemplateComponent } from './payment-template/payment-template.component';
 
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
-    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent
+    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
@@ -52,7 +53,7 @@ import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.com
     // Specify your library as an import
     SlickModule.forRoot()
   ],
-  providers: [SlickComponent,FormBuilder,DataService,HttpClient],
+  providers: [SlickComponent,FormBuilder,DataService],
   entryComponents: [
     DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent,PreviewTemplateComponent
   ],
