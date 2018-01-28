@@ -10,7 +10,7 @@ import { SelectTemplateDialogComponent } from '../select-template-dialog/select-
 })
 export class DialogComponent implements OnInit {
 
-
+  
   animal: string;
   name: string;
 
@@ -42,21 +42,32 @@ export class DialogComponent implements OnInit {
 })
 export class DialogOverviewExampleDialog {
   public val = 0;
+  error:boolean = false;
   public valComm = {'1':'hindu','2':'muslim','3':'sikh','4':'christian'}
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public router:Router) { }
+    @Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public router:Router) { 
+      localStorage.removeItem('set_community');
+    }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
   setCommunity(event, vt){
+    this.error = false;
     localStorage.setItem('set_community',this.valComm[vt])
     this.val = vt;
   }
-  openSelectTemplateDialog(): void {
-    this.dialog.closeAll();
-    this.router.navigate(['/select-template']);
+  openSelectTemplateDialog() {
+    var dt = localStorage.getItem('set_community');
+    if( dt == '' || dt == null){
+      this.error = true;
+    }else{
+      this.error = false;
+      this.dialog.closeAll();
+      this.router.navigate(['/select-template']);
+    }
+
     /* let dialogRef = this.dialog.open(SelectTemplateDialogComponent, {
       width: '100%',
       height: '100%',
