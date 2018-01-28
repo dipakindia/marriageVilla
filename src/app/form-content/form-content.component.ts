@@ -42,7 +42,7 @@ export class FormContentComponent implements OnInit {
   email:FormControl;
   name_of_the_church:FormControl;
   caste_preference:FormControl; 
-
+  public com:string;
   public verifyEmail:any;
   constructor(private data_service:DataService, fb: FormBuilder,public router:Router,public dialog: MatDialog) {
     this.options = fb.group({
@@ -54,6 +54,7 @@ export class FormContentComponent implements OnInit {
   ngOnInit() {
     this.createFormControls();
     this.createForm();
+    this.com = localStorage.getItem('set_community')
   }
 
   createFormControls() {
