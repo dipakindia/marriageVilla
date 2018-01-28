@@ -105,46 +105,46 @@
         </div>
       </div>
 
-      <div class="panel panel--white-line">
+      <div class="panel panel--white-line" *ngIf = "com != 'christian'" >
         <div class="panel__heading"> Religion: </div>
         <div class="panel__body">
           <div class="form form--labeled form--lowercase form--big-padding">
             <div class="form__row">
               <div class="l-row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" *ngIf = "com == 'hindu' || com == 'muslim' || com == 'sikh'" >
                   <label>Caste</label>
                   <div class="form__input"><input type="text" formControlName = "cast" class="form-control" placeholder="caste"></div>
                 </div>
                
-                <div class="col-sm-6">
+                <div class="col-sm-6" *ngIf = "com == 'muslim'" >
                     <label>Sub Caste</label>
                     <div class="form__input"><input type="text" formControlName = "sub_cast" class="form-control" placeholder="sub caste"></div>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" *ngIf = "com == 'hindu' || com == 'sikh'">
                       <label>Gotra</label>
                       <div class="form__input"><input type="text" formControlName = "gotra" class="form-control" placeholder="gotra"></div>
                     </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" *ngIf = "com == 'muslim'">
                       <label>Maththab</label>
                       <div class="form__input"><input type="text" formControlName = "maththab" class="form-control" placeholder="maththab"></div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" *ngIf = "com == 'muslim'">
                         <label>Speak Urdu</label>
                         <div class="form__input"><input type="text" formControlName = "speak_urdu" class="form-control" placeholder="Birth time"></div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6" *ngIf = "com == 'muslim'">
                           <label>Namaz</label>
                           <div class="form__input"><input type="text" formControlName = "namaz" class="form-control" placeholder="Birth time"></div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" *ngIf = "com == 'muslim'">
                             <label>Fasting</label>
                             <div class="form__input"><input type="text" formControlName = "fasting" class="form-control" placeholder="Birth time"></div>
                           </div>
-                          <div class="col-sm-6">
+                          <div class="col-sm-6" *ngIf = "com == 'muslim'">
                               <label>Hijab after marriage</label>
                               <div class="form__input"><input type="text" formControlName = "hijab_after_marriage" class="form-control" placeholder="Birth time"></div>
                           </div>
-                          <div class="col-sm-6">
+                          <div class="col-sm-6" *ngIf = "com == 'muslim'">
                                 <label>Quran</label>
                                 <div class="form__input"><input type="text" formControlName = "quran" class="form-control" placeholder="Birth time"></div>
                           </div>  
@@ -227,7 +227,7 @@
         </div>
       </div>
 
-      <div class="panel panel--white-line">
+      <div class="panel panel--white-line" *ngIf = "com == 'christian'">
           <div class="panel__heading"> Beliefs: </div>
           <div class="panel__body">
             <div class="form form--labeled form--lowercase form--big-padding">
