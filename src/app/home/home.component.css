@@ -206,3 +206,7 @@
     position: absolute;
 }
 
+.mat-menu {
+    font-weight: 700;
+    color: #fff !important;
+}
