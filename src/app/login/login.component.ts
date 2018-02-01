@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
   getLogin(){
-    alert(this.user_name)
     this.data_service.userLogin(this.myform.value.user_name,this.myform.value.password).subscribe(result => { 
       console.log(result);
       if(result['statusCode'] == 1){
