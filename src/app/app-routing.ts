@@ -1,3 +1,4 @@
+import { SignupComponent } from './signup/signup.component';
 import { AddPersonalInfoComponent } from './add-personal-info/add-personal-info.component';
 import { BiodataComponent } from './biodata/biodata.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -18,6 +19,7 @@ import { PaymentTemplateComponent } from './payment-template/payment-template.co
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
+    {path: 'signup', component: SignupComponent},
     {path: 'home', component: HomeComponent},
     {path: 'my-biodata', component: BiodataComponent},
     {path: 'about-us', component: AboutUsComponent},

@@ -33,13 +33,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { PreviewTemplateComponent } from './preview-template/preview-template.component';
 import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
 import { PaymentTemplateComponent } from './payment-template/payment-template.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
-    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent
+    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
