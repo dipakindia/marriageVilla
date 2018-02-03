@@ -2,6 +2,8 @@ import { AddPersonalInfoComponent } from './../add-personal-info/add-personal-in
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA,MatDialog } from '@angular/material';
 import { PreviewTemplateComponent } from '../preview-template/preview-template.component';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-team',
@@ -21,7 +23,16 @@ export class TeamComponent implements OnInit {
    }
 
   ngOnInit() {
-   
+    
+    $('.slick-track').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      infinite: true,
+      slidesToShow: 5,
+      speed: 500,
+      prevArrow: '<div class="c-tunnel__carousel-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+      nextArrow: '<div class="c-tunnel__carousel-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>' 
+  });
   }
   get getTemplateList(){
     var result = [];
@@ -51,4 +62,9 @@ export class TeamComponent implements OnInit {
       data: {  }
     });
   }
+
+
+  
+
+
 }

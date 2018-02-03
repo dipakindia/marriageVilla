@@ -13,29 +13,24 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
 <link rel="stylesheet" type="text/css" href="assets/css/style-slick.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 <link href='assets/style-new.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <app-root></app-root>
-  <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
 <!-- SLIDER -->
-<script type="text/javascript" src="assets/js/jquery.skippr.js"></script>
-<script>
-	$(document).ready(function() {
-	    "use strict";
-		$("#random").skippr({
-			navType: 'bubble',
-			transition: 'fade',
-			autoPlay: true,
-			autoPlayDuration: 4000,
-			speed: 1000,
-			arrows: false
-    });
 
-	});
-</script>
 
-<!-- DropDownMenu -->
+<!--Slick Slider-->
+
+
+<!--Slick Slider-->
+
+<!--<script type="text/javascript" src="assets/js/jquery.skippr.js"></script>-->
+
+
+
+<!-- DropDownMenu 
 <script type="text/javascript" src="assets/js/effects.js"></script>
 <script type="text/javascript" src="assets/js/jquery.arctext.js"></script>
 <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
@@ -56,40 +51,13 @@ var $ = jQuery.noConflict();
    $('#defaultCountdown').countdown({until: new Date(2019, 8 - 1, 9, 12), format: 'y-o-d-h'});	 	
 
   });
-</script>
-	
+</script>-->
 
-		<script type="text/javascript" src="assets/js/slick.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function() {
-		 $('.center').slick({
-        centerMode: true,
-        infinite: true,
-        centerPadding: '60px',
-        slidesToShow: 5,
-        speed: 500,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: true,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-        }],
-        prevArrow: '<div class="c-tunnel__carousel-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
-      nextArrow: '<div class="c-tunnel__carousel-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>'
-    });
-	})
-		</script>
 
+
+
+       
+
+       
 </body>
 </html>

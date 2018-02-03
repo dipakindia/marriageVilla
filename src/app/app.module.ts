@@ -18,7 +18,7 @@ import { routes } from './app-routing';
 import { LoginComponent } from './login/login.component';
 import { ServerErrorComponent } from './server-error/server-error.component';
 // Import your library
-import { SlickModule, SlickComponent } from 'ngx-slick';
+import { SlickModule } from 'ngx-slick';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BlogComponent } from './blog/blog.component';
@@ -34,6 +34,11 @@ import { PreviewTemplateComponent } from './preview-template/preview-template.co
 import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.component';
 import { PaymentTemplateComponent } from './payment-template/payment-template.component';
 import { SignupComponent } from './signup/signup.component';
+import * as $ from 'jquery';
+import 'slick-carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +59,7 @@ import { SignupComponent } from './signup/signup.component';
     // Specify your library as an import
     SlickModule.forRoot()
   ],
-  providers: [SlickComponent,FormBuilder,DataService],
+  providers: [FormBuilder,DataService],
   entryComponents: [
     DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent,PreviewTemplateComponent
   ],
