@@ -10,7 +10,7 @@
       <h1>Sign Up for Free</h1>
       
       <form action="/" method="post" [formGroup]="myform">
-       
+        <p *ngIf="error">{{ error }}</p>
       <div class="top-row">
         <div class="field-wrap">
           <label>

@@ -16,7 +16,8 @@ export class SignupComponent implements OnInit {
   private email : FormControl;
   private password: FormControl;
   private mobile : FormControl;
-  constructor( private data_service : DataService, public Router: Router) { }
+  public error:string
+  constructor( private data_service : DataService, public router: Router) { }
 
   ngOnInit() {
     this.createRegisterationForm();
@@ -24,9 +25,20 @@ export class SignupComponent implements OnInit {
   }
 
   getRegister(){
-    this.data_service.userRegister(this.myform.value.fname).subscribe(result=>{
-   // this.data_service.userRegister(this.myform.value.name,this.myform.value.email,this.myform.value.password,this.myform.value.mobile).subscribe(result=>{
-    console.log(result);
+   // this.data_service.userRegister(this.myform.value.email).subscribe(result=>{
+    //this.data_service.userLogin(this.myform.value.name,this.myform.value.email,).subscribe(result => { 
+    
+    this.data_service.userRegister(this.myform.value.name,this.myform.value.email,this.myform.value.password,this.myform.value.mobile).subscribe(result=>{
+    console.log(this.myform.value);
+    if(result['statusCode'] == 1){
+      sessionStorage.setItem('token_id',result['user_data'].token_id);
+      sessionStorage.setItem('user_id',result['user_data'].user_id );
+      sessionStorage.setItem('user_data', JSON.stringify(result['user_data']));
+      this.router.navigate(['/home'])
+    }else{
+      this.error = result['msg'];
+      
+    }
     })
   }
 

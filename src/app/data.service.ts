@@ -17,9 +17,9 @@ export class DataService {
     const body = new HttpParams().set('action', 'login').set('user_name', user_name).set('password', password);
     return this._http.post(environment.api_url, body, { headers: myheader });
   }
-  userRegister(userRegi){
+  userRegister(name,email,password,mobile){
     const myheader = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-    const body = new HttpParams().set('action','registration').set('name', 'name').set('email','email').set('mobile','mobile').set('password',JSON.stringify(userRegi));
+    const body = new HttpParams().set('action','registration').set('name', 'name').set('email','email').set('mobile','mobile').set('password','password');
     return this._http.post(environment.api_url, body,{headers:myheader });
   }
 
