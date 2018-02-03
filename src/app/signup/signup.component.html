@@ -9,21 +9,21 @@
     <div id="signup">   
       <h1>Sign Up for Free</h1>
       
-      <form action="/" method="post">
-      
+      <form action="/" method="post" [formGroup]="myform">
+       
       <div class="top-row">
         <div class="field-wrap">
           <label>
             First Name<span class="req">*</span>
           </label>
-          <input type="text" required autocomplete="off" />
+          <input type="text" required autocomplete="off" formControlName = "fname" />
         </div>
     
         <div class="field-wrap">
           <label>
             Last Name<span class="req">*</span>
           </label>
-          <input type="text"required autocomplete="off"/>
+          <input type="text"required autocomplete="off" formControlName = "lname"/>
         </div>
       </div>
 
@@ -31,17 +31,17 @@
         <label>
           Email Address<span class="req">*</span>
         </label>
-        <input type="email"required autocomplete="off"/>
+        <input type="email"required autocomplete="off" formControlName = "email"/>
       </div>
       
       <div class="field-wrap">
         <label>
           Set A Password<span class="req">*</span>
         </label>
-        <input type="password"required autocomplete="off"/>
+        <input type="password"required autocomplete="off" formControlName = "password"/>
       </div>
       
-      <button type="submit" class="button button-block">Get Started</button>
+      <button type="submit" class="button button-block" (click)="getRegister()">Get Started</button>
       
       </form>
 
