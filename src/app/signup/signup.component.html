@@ -8,9 +8,9 @@
   <div class="tab-content">
     <div id="signup">   
       <h1>Sign Up for Free</h1>
-      
+      <pre>{{ myform.value | json }}</pre>
       <form action="/" method="post" [formGroup]="myform">
-        <p *ngIf="error">{{ error }}</p>
+        <p class="error" *ngIf="error">{{ error }}</p>
       <div class="top-row">
         <div class="field-wrap">
           <label>
@@ -31,7 +31,7 @@
         <label>
           Email Address<span class="req">*</span>
         </label>
-        <input type="email"required autocomplete="off" formControlName = "email"/>
+        <input type="email" required autocomplete="off" formControlName = "email"/>
       </div>
       
       <div class="field-wrap">

@@ -19,7 +19,7 @@ export class DataService {
   }
   userRegister(data){
     var name = data.fname + ' ' + data.lname;
-    var email = data.eamil;
+    var email = data.email;
     var mobile = data.mobile;
     var password = data.password;
     const myheader = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
