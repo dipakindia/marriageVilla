@@ -10,11 +10,11 @@
           <li><a routerLink = "/blog">BLOG</a></li>
           <li><a routerLink = "/about-us">About Us</a></li>
           <li><a routerLink = "/contact-us">Contact Us</a></li> 
-          <li>
+          <li class="my-account">
                 <button mat-button [matMenuTriggerFor]="menu">My Account</button>
                 <mat-menu #menu="matMenu">
-                <button mat-menu-item>Login</button>
-                <button mat-menu-item>Register</button>
+                <button mat-menu-item (click) = "gotologin($event)">Login</button>
+                <button mat-menu-item (click) = "gotoregister($event)">Register</button>
                 </mat-menu>
           </li> 
       </ul>

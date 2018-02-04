@@ -8,7 +8,7 @@
   <div class="tab-content">
     <div id="signup">   
       <h1>Sign Up for Free</h1>
-      <pre>{{ myform.value | json }}</pre>
+      <!-- <pre>{{ myform.value | json }}</pre> -->
       <form action="/" method="post" [formGroup]="myform">
         <p class="error" *ngIf="error">{{ error }}</p>
       <div class="top-row">

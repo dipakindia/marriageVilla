@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { DialogOverviewExampleDialog } from './dialog/dialog.component';
 import { Component } from '@angular/core';
@@ -12,7 +13,7 @@ export class AppComponent {
   animal: string;
   name: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,public router:Router) {}
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -25,5 +26,11 @@ export class AppComponent {
       console.log('The dialog was closed');
       this.animal = result;
     });
+  }
+  gotologin($event){
+    this.router.navigate(['/login']);
+  }
+  gotoregister($event){
+    this.router.navigate(['/signup']);
   }
 }

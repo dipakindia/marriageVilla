@@ -7,6 +7,31 @@
     height: 350px;
    
 }
+.odd img, .even img {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    padding: 5px;
+}
+.even {
+    float: left;
+    margin-right: 10px;
+}
+.odd {
+    float: right;
+    margin-left: 10px;
+}
+small {
+    font-size: 15px;
+    color: #F25;
+}
+.service-text {
+    float: left;
+    width: 310px;
+    font-size: 15px;
+    font-weight: normal;
+}   
 .landing__welcome--blue a, .landing__welcome--blue {
     color: #fff;
 }
@@ -52,4 +77,28 @@ hr {
     background: #eee;
     padding: 20px;
     margin-bottom: 30px;
+    border: 1px solid #999;
+    float: left;
+}
+.service-text h3 {
+    color: #369;
+    font-size: 21px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 2em;
+    height: 2em
+}
+.service-text p {
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+    height: 110px;
+    overflow-y: scroll;
+}
+.col-md-12 p {
+    color: #369;
+    font: 30px/40px calibri;
+    text-shadow: 0px 0px 1px #000;
 }

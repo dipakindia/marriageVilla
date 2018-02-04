@@ -17,7 +17,12 @@ export class TeamComponent implements OnInit {
     {'comm':'christian',temp: ['1','2','3','4','5','1','2','3',] },
     {'comm':'sikh',temp: ['1','2','3','4','5','1','2','3',] }]
   public comm = 'hindu';
-  public select:number = 4;
+  public select:number = 2;
+  public a:number = 0;
+  public first:number = 1;
+  public second:number = 2;
+  public third:number = 3;
+  public fourth:number = 4;
   constructor(public dialog: MatDialog) {
     this.community = this.community.filter(data => data.comm === localStorage.getItem('set_community'));    
    }
@@ -63,8 +68,22 @@ export class TeamComponent implements OnInit {
     });
   }
 
+/*   btnPrev(){
+    this.a--;
+    this.first--;
+    this.second--;
+    this.third--;
+    this.fourth--;
+  }
+  btnNext(){
+    this.a++;
+    this.first++;
+    this.second++;
+    this.third ++;
+    this.fourth++;
+  }
 
-  
+   */
 
 
 }

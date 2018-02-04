@@ -16,11 +16,9 @@
 .landing .header {
     text-align: center;
 }
-
-.h-strong {
-    font-weight: 600;
-    margin-top: 47px;
-    color: #fff;
+.heding-s {
+    font-size: 19px;
+    margin-bottom: 5px;
 }
  .h3 {
     font-size: 22px;
@@ -81,22 +79,7 @@
 h3{
     padding:0 0 8px 0px;
 }
- input, select, button, textarea {
-    margin: 9px;
-    border: 1px solid lightgray;
-    padding: 7px;
-    display: inline-block;
-    background: #f4f4f4;
-    border-radius: 8px 8px;
-    vertical-align: middle;
-    white-space: normal;
-    line-height: 1;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width: 360px;
-    -moz-box-sizing: border-box;
-}
+ 
 .pg-titl-bdr-btm{
     width: 300px;
     height: 1px;
@@ -115,19 +98,38 @@ h3{
     padding: 31px;
     margin-bottom: 30px;
 }
-button, html [type="button"], [type="reset"], [type="submit"] {
-    -webkit-appearance: button;
-    background: skyblue !important;
-    border: 1px solid darkgray !important;
-    padding: 9px !important;
+input#email {
+    background: #fff;
+    border: 1px solid #369;
+    font-size: 18px;
+    margin-right: -15px;
+    border-radius:  5px 0 0 5px;
 }
-.box{
-    background: #dddd;
-    padding: 20px;
-    margin: 10px;
+button.button-medium {
+    border: 1px solid #369 !important;
+    color: #fff;
+    background: #369 !important;
+    margin-left: -30px;
+    padding: 13px;
+    border-radius: 0 5px 5px 0;
 }
-
 .heding-s{
     font-size: 22px;
     margin: 10px 0;
+}
+.sec2 {
+    background: #ddd;
+    padding: 15px;
+}
+.sec-1 {
+    background: #f1f1f1;
+    padding: 15px;
+}
+ul li {
+    list-style: square;
+    margin-left: 20px;
+    padding: 2px 0;
+    line-height: 30px;
+    font-family: calibri;
+    font-size: 18px;
 }
