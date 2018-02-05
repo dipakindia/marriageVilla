@@ -68,7 +68,7 @@ export class TeamComponent implements OnInit {
     });
   }
 
-/*   btnPrev(){
+ btnPrev(){
     this.a--;
     this.first--;
     this.second--;
@@ -83,7 +83,6 @@ export class TeamComponent implements OnInit {
     this.fourth++;
   }
 
-   */
 
 
 }
