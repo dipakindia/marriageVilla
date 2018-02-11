@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { DialogOverviewExampleDialog } from './dialog/dialog.component';
 import { Component } from '@angular/core';
+import { AuthService } from 'angular4-social-login';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,16 @@ export class AppComponent {
   title = 'app';
   animal: string;
   name: string;
-
-  constructor(public dialog: MatDialog,public router:Router) {}
-
+  display_name:string;
+  userLoggedIn:boolean;
+  constructor(public dialog: MatDialog,public router:Router,private authService: AuthService) {
+    this.userLoggedIn = (sessionStorage.getItem('user_id') != '' && sessionStorage.getItem('user_id') != null) ? true : false;
+    this.display_name = JSON.parse(sessionStorage.getItem('user_deatils'));
+  }
+  signOut(): void {
+    sessionStorage.clear();
+    this.authService.signOut();
+  }
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '60%',

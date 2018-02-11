@@ -37,7 +37,31 @@ export class LoginComponent implements OnInit {
     
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
+      //alert(JSON.stringify(user))
       this.user = user;
+
+
+      if(user){
+        var userData = {};
+        userData['name'] = user.name;
+        userData['email'] = user.email;
+        userData['social_key'] = 'gplus';
+        userData['social_id'] = user.id;
+        alert("Social Login")
+        this.data_service.userSocialLogin(userData).subscribe(result => { 
+          console.log(result);
+
+          if(result['statusCode'] == 1){
+            sessionStorage.setItem('token_id',result['user_deatils'].token_id);
+            sessionStorage.setItem('user_id',result['user_deatils'].user_id );
+            sessionStorage.setItem('user_deatils', JSON.stringify(result['user_deatils']));
+            this.router.navigate(['/home'])
+          }else{
+            this.error = result['msg'];
+            
+          }
+        })
+      }
       this.loggedIn = (user != null);
     });
     this.createFormControls();
