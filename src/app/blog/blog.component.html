@@ -20,11 +20,11 @@
       <article class="post hentry post-wrapper">
         <h2 class="post-title entry-title"> <a href="#" title="Google Turns Links Black, How to Get them Back to Blue">
           {{blogdata.title.rendered}} </a> </h2>
-        <div class="post-info"> <span class="label-info"> Date : <a href="#" rel="bookmark" title="permanent link"><abbr class="published updated" title="2016-05-12T06:56:00-07:00">5/12/2016</abbr></a> </span>  </div>
+        <div class="post-info"> <span class="label-info"> Date : <abbr class="published updated" >{{blogdata.date | date: 'medium'}}</abbr> </span>  </div>
         <a content="#">
         <div class="post-image fade-in one"><span class="overlay"></span>
 
-        <img width="115" height="100" src="{{ image(blogdata.featured_media)}}" alt="Google Turns Links Black, How to Get them Back to Blue" title="Google Turns Links Black, How to Get them Back to Blue"></div>
+        <img width="115" height="100" src="{{ blogdata.better_featured_image.source_url }}" alt="Google Turns Links Black, How to Get them Back to Blue" title="Google Turns Links Black, How to Get them Back to Blue"></div>
         </a>
         <div class="post-body entry-content" id="post-body-5823193655041718066">
           <div id="summary5823193655041718066">
