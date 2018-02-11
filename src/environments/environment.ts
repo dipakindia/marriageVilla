@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
  api_url: 'http://localhost/maariagevilla/api/index.php',
+ blog_url: 'http://localhost/wordpress4AngularJs/wp-json/wp/v2/posts'
    /* api_url: 'http://indiainfosystem.com/marriagevilla/api/index.php'  */
 };

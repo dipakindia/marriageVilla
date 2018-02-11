@@ -31,6 +31,12 @@ export class DataService {
     const body = new HttpParams().set('action','registration').set('name', name).set('email',email).set('mobile',mobile).set('password',password);
     return this._http.post(environment.api_url, body,{headers:myheader });
   }
+  getBlog(){
+    return this._http.get(environment.blog_url+'posts').map(dt =>dt);
+  }
+  getImage(imageId){
+    return this._http.get(environment.blog_url+'media/'+imageId).map(dt =>dt);
+  }
 
 
 
