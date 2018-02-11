@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private data_service: DataService, 
     public router: Router, private authService: AuthService) { }
-    
+
     signInWithGoogle(): void {
       this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
     }
@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
+      alert(JSON.stringify(this.user));
       this.loggedIn = (user != null);
     });
     this.createFormControls();
