@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
   //@Input() contact:any;                     //api call
 
   constructor (private http: Http){
-    this.getBlogData();
+    //this.getBlogData();
    }
 
    getBlogData(){

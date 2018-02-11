@@ -17,6 +17,11 @@ export class DataService {
     const body = new HttpParams().set('action', 'login').set('user_name', user_name).set('password', password);
     return this._http.post(environment.api_url, body, { headers: myheader });
   }
+  userSocialLogin(data){
+    const myheader = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    const body = new HttpParams().set('action', 'social_login').set('name', data.name).set('email', data.email).set('social_key', data.social_key).set('social_id', data.social_id);
+    return this._http.post(environment.api_url, body, { headers: myheader });
+  }
   userRegister(data){
     var name = data.fname + ' ' + data.lname;
     var email = data.email;
