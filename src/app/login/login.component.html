@@ -2,8 +2,15 @@
       
   <ul class="tab-group">
     <li class="tab "><a routerLink="/signup">Sign Up</a></li>
-    <li class="tab active"><a routerLink="/login">Log In</a></li>
-  </ul>
+    <li class="tab active"><a routerLink="/login">Log In</a></li><br>
+  
+<!-- <li><a (click)="FacebookLoginFunction()" class="btn btn-primary btn-block">Facebook</a></li>
+<li><a (click)="GoogleLoginFunction()" class="btn btn-primary btn-block">Google</a></li>
+ -->
+ <li><a (click)="signInWithFB()" class="btn btn-primary btn-block">Facebook</a></li>
+<li><a (click)="signInWithGoogle()" class="btn btn-primary btn-block">Google</a></li>
+
+</ul>
   
   <div class="tab-content">    
     <div id="login">   

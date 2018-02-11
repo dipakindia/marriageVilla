@@ -1,6 +1,8 @@
 import { DataService } from './data.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { SocialLoginModule,AuthServiceConfig } from 'angular4-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -39,6 +41,17 @@ import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+ /*for social login */
+let config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("788304283787-us97lcchgb8iuvhpqhoifh9fv566r20d.apps.googleusercontent.com")
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("885115328225357")
+  }
+]);
 
 @NgModule({
   declarations: [
@@ -57,7 +70,9 @@ import 'slick-carousel/slick/slick-theme.css';
     HttpClientModule,
     RouterModule.forRoot(routes, { useHash: true, enableTracing: false }), 
     // Specify your library as an import
-    SlickModule.forRoot()
+    SlickModule.forRoot(),
+    SocialLoginModule.initialize(config)
+
   ],
   providers: [FormBuilder,DataService],
   entryComponents: [

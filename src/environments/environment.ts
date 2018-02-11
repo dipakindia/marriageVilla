@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost/maariagevilla/api/index.php',
- /*  api_url: 'http://indiainfosystem.com/marriagevilla/api/index.php' */
+ /* api_url: 'http://localhost/maariagevilla/api/index.php',*/
+   api_url: 'http://indiainfosystem.com/marriagevilla/api/index.php' 
 };
