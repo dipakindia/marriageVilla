@@ -65,10 +65,6 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
   }
- excerpt(data){
-  return JSON.parse(data)
-}
-
 
 image(image_id){
   var image = '';

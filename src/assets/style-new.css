@@ -87429,3 +87429,7 @@ button.Zebra_DatePicker_Icon:focus {
 .drop-me-here .sortable-ghost {
     display: none
 }
+.snippets p {
+    font-weight: normal !important;
+    text-align: left;
+}
