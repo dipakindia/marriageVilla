@@ -47,8 +47,7 @@ import 'rxjs/add/operator/map';
 })
 
 export class BlogComponent implements OnInit {
-
-  private apiUrl='http://localhost/wordpress4AngularJs/wp-json/wp/v2/posts';
+//private apiUrl='http://localhost/wordpress4AngularJs/wp-json/wp/v2/posts';
   public data: any;
   public images:any = {};
   //data:any[];
@@ -66,7 +65,7 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
   }
 
-image(image_id){
+/*image(image_id){
   var image = '';
   alert(JSON.stringify(image_id))
   this.data_service.getImage(image_id).subscribe(img => {
@@ -75,5 +74,5 @@ image(image_id){
     this.images[image_id] = image
   });
   //return image;
-}
+}*/
 }

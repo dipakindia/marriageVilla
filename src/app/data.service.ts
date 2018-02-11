@@ -34,9 +34,12 @@ export class DataService {
   getBlog(){
     return this._http.get(environment.blog_url+'posts').map(dt =>dt);
   }
-  getImage(imageId){
-    return this._http.get(environment.blog_url+'media/'+imageId).map(dt =>dt);
+  getSingleBlog(blog_id){
+    return this._http.get(environment.blog_url+'posts/'+blog_id).map(data =>data);
   }
+  /*getImage(imageId){
+    return this._http.get(environment.blog_url+'media/'+imageId).map(dt =>dt);
+  }*/
 
 
 

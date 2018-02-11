@@ -18,7 +18,7 @@
 <div class="date-posts">
     <div class="post-outer" *ngFor="let blogdata of data">
       <article class="post hentry post-wrapper">
-        <h2 class="post-title entry-title"> <a href="#" title="Google Turns Links Black, How to Get them Back to Blue">
+        <h2 class="post-title entry-title"> <a routerLink="/blog/{{blogdata.id}}" title="Google Turns Links Black, How to Get them Back to Blue">
           {{blogdata.title.rendered}} </a> </h2>
         <div class="post-info"> <span class="label-info"> Date : <abbr class="published updated" >{{blogdata.date | date: 'medium'}}</abbr> </span>  </div>
         <a content="#">
