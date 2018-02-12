@@ -117,3 +117,19 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-slide{margin: 4rem 2rem;
+    /*background: rgba(0,0,0,0.09) !important;*/
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+}
+.slick-slide.slick-current{opacity: 1;}
+
+.slick-slide:not(.is-active) {
+    cursor: pointer;
+}

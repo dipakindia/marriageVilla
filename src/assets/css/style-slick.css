@@ -97,10 +97,14 @@ table.settings td:nth-of-type(2):before{content: 'Type: '; font-weight: 700;}
 table.settings td:nth-of-type(3):before{content: 'Default: '; font-weight: 700;}
 table.methods td:nth-of-type(2):before{content: 'Arguments: '; font-weight: 700;}
 }
+.slick-slide h3{ position: relative;}
 
 .slick-slide.slick-current h3 {
   border: 5px solid #ff6d67;
+  position: relative;
 }
+.slick-slide  .temlate-selected{ position: absolute; bottom:20px; left: 0; right: 0; margin: auto; text-align: center; opacity: 0;}
+.slick-slide.slick-current .temlate-selected {opacity: 1;}
 .c-tunnel__carousel-next.slick-arrow {
   background: #ff6d67;
   width: 50px;
@@ -114,7 +118,7 @@ table.methods td:nth-of-type(2):before{content: 'Arguments: '; font-weight: 700;
   z-index: 99;
 }
 .slick-slider div h4 {
-  color: #fff;
+  color: #000;
   text-transform: capitalize;
   font: 20px verdana !important;
   padding-top: 10px;
@@ -151,10 +155,7 @@ button.select-template {
   width: inherit;
   color: #fff;
   font-size: 18px;
-  float: left;
-  margin: 10px;
   border: none;
-  padding: 10px 15px;
   box-shadow: 0px 2px 5px #000;
   cursor: pointer;
 }
@@ -163,14 +164,16 @@ button.zoom {
   width: inherit;
   color: #fff;
   font-size: 18px;
-  float: left;
-  margin: 10px;
   border: none;
-  padding: 10px 15px;
   box-shadow: 0px 2px 5px #000;
   cursor: pointer;
 }
-.temlate-selected {
-  top: -53px;
-  position: relative;
+
+
+.slick-arrow{
+  background: #ff6d67;
+  opacity: 0;
 }
+
+  .slick-slide.slick-current .slick-arrows .slick-arrow{opacity:1;}
+  

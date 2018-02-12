@@ -32,12 +32,25 @@ export class TeamComponent implements OnInit {
     $('.slick-track').slick({
       centerMode: true,
       centerPadding: '60px',
+      //appendArrows: '.slick-track',
+      appendArrows: ('.slick-arrows'),
       infinite: true,
       slidesToShow: 5,
       speed: 500,
-      prevArrow: '<div class="c-tunnel__carousel-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
-      nextArrow: '<div class="c-tunnel__carousel-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>' 
+      arrows:true,
+     
   });
+
+  $('.slick-prev').on('click', function(){
+    $('.slick-track').slick("slickPrev");
+});
+
+$('.slick-next').on('click', function(){
+  $('.slick-track').slick("slickNext");
+});
+
+ 
+
   }
   get getTemplateList(){
     var result = [];
