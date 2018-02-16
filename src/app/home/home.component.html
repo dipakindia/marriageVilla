@@ -119,7 +119,7 @@
                  <div class="about_pic"><img src="assets/images/image12.jpg" alt="" title="" /></div>
                  </div>
              <a href="#" class="thumb_read_more">MORE ABOUT JENIFER</a>
-            <p>Love is friendship that has caught fire. It is quiet understanding, mutual confidence, <a href="#">sharing and forgiving</a>. It is loyalty through good and bad times. It settles for less than perfection and <strong>makes allowances</strong> for human weaknesses "<a href="#">LOVE QUOTE</a>":</p>
+            <p class="love_para">Love is friendship that has caught fire. It is quiet understanding, mutual confidence, <a href="#">sharing and forgiving</a>. It is loyalty through good and bad times. It settles for less than perfection and <strong>makes allowances</strong> for human weaknesses "<a href="#">LOVE QUOTE</a>":</p>
             <span class="love_quote">Sometimes the heart sees what is invisible to the eye.</span>
             
         </div>
@@ -136,7 +136,7 @@
                  <div class="about_pic"><img src="assets/images/image12_2.jpg" alt="" title="" /></div>
                  </div>
              <a href="#" class="thumb_read_more">MORE ABOUT OLIVER</a>
-            <p>I believe that imagination is stronger than knowledge. That myth is more potent than history. That dreams are more powerful than facts. That hope always triumphs over experience. That laughter is the only cure for grief. And I believe that love is stronger than death "<a href="#">LOVE QUOTE</a>":</p>
+            <p class="love_para">I believe that imagination is stronger than knowledge than history. That dreams are more powerful. That hope always triumphs over experience. That laughter is the only cure for grief. And I believe that love is stronger than death "<a href="#">LOVE QUOTE</a>":</p>
             <span class="love_quote">Where there is love there is life.</span>
         </div>
 
@@ -162,7 +162,7 @@
                                <div class="team-info">
                                    <div class="img-sec">
                                        <img src="assets/images/templates/hindu/1.jpg" class="img-responsive">
-                                       <h3> HINDU </h3>
+                                       <h3 class="comm-title"> HINDU </h3>
                                    </div>
                                </div>
                            </div>
@@ -170,7 +170,7 @@
                                    <div class="team-info">
                                        <div class="img-sec">
                                            <img src="assets/images/templates/christian/2.jpg" class="img-responsive">
-                                           <h3> CHRISTIAN </h3>
+                                           <h3 class="comm-title"> CHRISTIAN </h3>
                                        </div>
                                    </div>
                            </div>
@@ -178,7 +178,7 @@
                                    <div class="team-info">
                                        <div class="img-sec">
                                            <img src="assets/images/templates/sikh/1.jpg" class="img-responsive">
-                                           <h3> SIKH </h3>
+                                           <h3 class="comm-title"> SIKH </h3>
                                        </div>
                                    </div>
                            </div>
@@ -186,7 +186,7 @@
                                    <div class="team-info">
                                        <div class="img-sec">
                                            <img src="assets/images/templates/muslim/1.jpg" class="img-responsive">
-                                           <h3> MUSLIM </h3>
+                                           <h3 class="comm-title"> MUSLIM </h3>
                                        </div>
                                    </div>
                            </div>
@@ -208,17 +208,19 @@
 <div class="full_width_centered">
 <div class="latest_posts">
      <h2>FROM THE BLOG</h2>
-     <div class="left13">
+
+     <div class="left13" *ngFor="let blogdata of data">
        <div class="latest_post">
          <div class="post_info">
-            <span class="post_date">20 JUNE 2015</span>
-            <h3><a href="blog-single.html">THE PROPOSAL WAS AMAZING</a></h3>
-            <a href="blog-single.html" class="post_read_more">READ MORE</a>
+            <span class="post_date">{{blogdata.date | date: 'medium'}}</span>
+            <h3><a routerLink="/blog/{{blogdata.id}}"> {{blogdata.title.rendered}}</a></h3>
+            <a routerLink="/blog/{{blogdata.id}}" class="post_read_more">READ MORE</a>
          </div> 
          <img src="assets/images/post_thumb1.jpg" alt="" title="" />
        </div>
      </div>
-     <div class="left13">
+
+    <!-- <div class="left13">
        <div class="latest_post">
          <div class="post_info">
             <span class="post_date">18 MAY 2015</span>
@@ -228,6 +230,7 @@
          <img src="assets/images/post_thumb2.jpg" alt="" title="" />
        </div>
      </div>
+
      <div class="left13_last">
        <div class="latest_post">
          <div class="post_info">
@@ -237,7 +240,8 @@
          </div> 
          <img src="assets/images/post_thumb3.jpg" alt="" title="" />
        </div>
-     </div>
+     </div>-->
+     <div class="clear"></div>
      <a routerLink ="/blog" class="view_all">VIEW ALL POSTS</a>
      <div class="clear"></div>
 </div>
