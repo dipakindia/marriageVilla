@@ -23,35 +23,13 @@ export class TeamComponent implements OnInit {
   public second:number = 2;
   public third:number = 3;
   public fourth:number = 4;
+  public current_community:string;
   constructor(public dialog: MatDialog) {
     this.community = this.community.filter(data => data.comm === localStorage.getItem('set_community'));    
+    this.current_community = localStorage.getItem('set_community');
    }
 
-  ngOnInit() {
-    
-    $('.slick-track').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      //appendArrows: '.slick-track',
-      appendArrows: ('.slick-arrows'),
-      infinite: true,
-      slidesToShow: 5,
-      speed: 500,
-      arrows:true,
-     
-  });
-
-  $('.slick-prev').on('click', function(){
-    $('.slick-track').slick("slickPrev");
-});
-
-$('.slick-next').on('click', function(){
-  $('.slick-track').slick("slickNext");
-});
-
- 
-
-  }
+  ngOnInit() { }
   get getTemplateList(){
     var result = [];
     this.community.forEach(data => {
@@ -63,8 +41,9 @@ $('.slick-next').on('click', function(){
     })
     return result;
   }
-  selectTemplate(event,j){
-    this.select = j;
+  selectTemplate(event){
+    alert(event.id)
+    this.select = event.id;
   }
   getZoomImage(event,caste,template){
     let dialogRef = this.dialog.open(PreviewTemplateComponent, {
@@ -80,22 +59,6 @@ $('.slick-next').on('click', function(){
       data: {  }
     });
   }
-
- btnPrev(){
-    this.a--;
-    this.first--;
-    this.second--;
-    this.third--;
-    this.fourth--;
-  }
-  btnNext(){
-    this.a++;
-    this.first++;
-    this.second++;
-    this.third ++;
-    this.fourth++;
-  }
-
 
 
 }

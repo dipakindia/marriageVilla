@@ -1,3 +1,4 @@
+import { SikhComponent } from './team/common/sikh/sikh.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddPersonalInfoComponent } from './add-personal-info/add-personal-info.component';
 import { BiodataComponent } from './biodata/biodata.component';
@@ -27,6 +28,7 @@ export const routes: Routes = [
     { path: 'blog/:id', component: BlogDetailPageComponent},
     {path: 'contact-us', component: ContactUsComponent},
     {path: 'select-template', component: TeamComponent},
+    {path: 'select-template-sikh', component: SikhComponent},
     {path: 'form', component: ModelFormComponent},
     {path: 'payment', component: PaymentTemplateComponent},
     {path: '504', component: ServerErrorComponent},
