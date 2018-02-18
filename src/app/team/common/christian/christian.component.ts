@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA,MatDialog } from '@angular/material';
 import * as $ from 'jquery';
 
@@ -8,7 +8,7 @@ import * as $ from 'jquery';
   styleUrls: ['./christian.component.css']
 })
 export class ChristianComponent implements OnInit {
-
+  @Output() goToFormdata: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -32,5 +32,7 @@ $('.slick-next').on('click', function(){
   $('.slick-track').slick("slickNext");
 });
   }
-
+  goToForm(){
+    this.goToFormdata.emit();
+  }
 }

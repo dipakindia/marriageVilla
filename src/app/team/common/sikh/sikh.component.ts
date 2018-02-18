@@ -34,7 +34,6 @@ $('.slick-next').on('click', function(){
 });
   }
   goToForm(){
-    var d = 10;
-    this.goToFormdata.emit(d);
+    this.goToFormdata.emit();
   }
 }
