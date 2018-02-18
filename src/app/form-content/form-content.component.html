@@ -18,31 +18,25 @@
                   <label>Name</label>           
                     <div class="form__input">
                       <input type="text" class="form-control" formControlName="name" type="text" placeholder="Enter your name" required />
+                      <app-show-errors [control]="myform.controls.name"></app-show-errors>
                     </div>
-                    <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
-                        <div [hidden]="!name.errors.required">
-                          Name is required!
-                        </div>
-                        <div [hidden]="!name.errors.minlength">
-                          name must be at least 4 characters long.
-                        </div>
-                        <div [hidden]="!name.errors.maxlength">
-                          name cannot be more than 30 characters long.
-                        </div>
-                      </div>
+                    
                 </div>
 
                 <div class="col-sm-6">
                   <label>Date of Birth</label>
-                  <div class="form__input"><input  type="text"  formControlName = "dob" placeholder="Enter Your Date of Birth" /></div>
-                </div>
+                  <div class="form__input"><input  type="text"  formControlName = "dob" class="form-control" placeholder="Enter Your Date of Birth" /></div>
+                  <app-show-errors [control]="myform.controls.birth_palace"></app-show-errors>
+               </div>
                 <div class="col-sm-6">
                   <label>Birth Place</label>
-                  <div class="form__input"><input type="text"  formControlName = "birth_palace" required placeholder="Enter your birth Palace"/></div>
+                  <div class="form__input"><input type="text"  formControlName = "birth_palace" class="form-control" required placeholder="Enter your birth Palace"/></div>
+                  <app-show-errors [control]="myform.controls.birth_palace"></app-show-errors>
                 </div>
                 <div class="col-sm-6">
                   <label>Birth Time</label>
-                  <div class="form__input"><input type="text"  formControlName = "birth_time" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text"  formControlName = "birth_time" class="form-control" placeholder="Birth time" required></div>
+                  <app-show-errors [control]="myform.controls.birth_time"></app-show-errors>
                 </div>
               </div>
             </div>
@@ -59,15 +53,18 @@
               <div class="l-row">
                 <div class="col-sm-4">
                   <label>Height</label>
-                  <div class="form__input"><input type="text" formControlName = "height" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "height" class="form-control" placeholder="height"></div>
+                  <app-show-errors [control]="myform.controls.birth_palace"></app-show-errors>
                 </div>
                 <div class="col-sm-4">
                   <label>Weight</label>
                   <div class="form__input"><input type="text"  formControlName = "weight" class="form-control" placeholder="weight"></div>
+                  <app-show-errors [control]="myform.controls.weight"></app-show-errors>
                 </div>
                 <div class="col-sm-4">
                   <label>Complexion</label>
                   <div class="form__input"><input type="text" formControlName = "complexion" class="form-control" placeholder="complexion"></div>
+                  <app-show-errors [control]="myform.controls.complexion"></app-show-errors>
                 </div>
               
               </div>
@@ -85,18 +82,22 @@
                 <div class="col-sm-6">
                   <label>Education</label>
                   <div class="form__input"><input type="text" formControlName = "education" class="form-control" placeholder="education"></div>
+                  <app-show-errors [control]="myform.controls.education"></app-show-errors>
                 </div>
                 <div class="col-sm-6">
                   <label>Profession</label>
                   <div class="form__input"><input type="text" formControlName = "profession" class="form-control" placeholder="profession"></div>
+                  <app-show-errors [control]="myform.controls.profession"></app-show-errors>
                 </div>
                 <div class="col-sm-6">
                   <label>Currently working</label>
                   <div class="form__input"><input type="text" formControlName = "currently_working" class="form-control" placeholder="currently working"></div>
+                  <app-show-errors [control]="myform.controls.currently_working"></app-show-errors>
                 </div>
                 <div class="col-sm-6">
                   <label>Hobbies</label>
                   <div class="form__input"><input type="text" formControlName = "hobbies" class="form-control" placeholder="hobbies"></div>
+                  <app-show-errors [control]="myform.controls.hobbies"></app-show-errors>
                 </div>
               
               </div>
@@ -114,15 +115,18 @@
                 <div class="col-sm-6" *ngIf = "com == 'hindu' || com == 'muslim' || com == 'sikh'" >
                   <label>Caste</label>
                   <div class="form__input"><input type="text" formControlName = "cast" class="form-control" placeholder="caste"></div>
+                  <app-show-errors [control]="myform.controls.cast"></app-show-errors>
                 </div>
                
                 <div class="col-sm-6" *ngIf = "com == 'muslim'" >
                     <label>Sub Caste</label>
                     <div class="form__input"><input type="text" formControlName = "sub_cast" class="form-control" placeholder="sub caste"></div>
+                    <app-show-errors [control]="myform.controls.sub_cast"></app-show-errors>
                   </div>
                   <div class="col-sm-6" *ngIf = "com == 'hindu' || com == 'sikh'">
                       <label>Gotra</label>
                       <div class="form__input"><input type="text" formControlName = "gotra" class="form-control" placeholder="gotra"></div>
+                      <app-show-errors [control]="myform.controls.gotra"></app-show-errors>
                     </div>
                   <div class="col-sm-6" *ngIf = "com == 'muslim'">
                       <label>Maththab</label>
@@ -130,23 +134,23 @@
                     </div>
                     <div class="col-sm-6" *ngIf = "com == 'muslim'">
                         <label>Speak Urdu</label>
-                        <div class="form__input"><input type="text" formControlName = "speak_urdu" class="form-control" placeholder="Birth time"></div>
+                        <div class="form__input"><input type="text" formControlName = "speak_urdu" class="form-control" placeholder="speak urdu"></div>
                       </div>
                       <div class="col-sm-6" *ngIf = "com == 'muslim'">
                           <label>Namaz</label>
-                          <div class="form__input"><input type="text" formControlName = "namaz" class="form-control" placeholder="Birth time"></div>
+                          <div class="form__input"><input type="text" formControlName = "namaz" class="form-control" placeholder="namaz"></div>
                         </div>
                         <div class="col-sm-6" *ngIf = "com == 'muslim'">
                             <label>Fasting</label>
-                            <div class="form__input"><input type="text" formControlName = "fasting" class="form-control" placeholder="Birth time"></div>
+                            <div class="form__input"><input type="text" formControlName = "fasting" class="form-control" placeholder="fasting"></div>
                           </div>
                           <div class="col-sm-6" *ngIf = "com == 'muslim'">
                               <label>Hijab after marriage</label>
-                              <div class="form__input"><input type="text" formControlName = "hijab_after_marriage" class="form-control" placeholder="Birth time"></div>
+                              <div class="form__input"><input type="text" formControlName = "hijab_after_marriage" class="form-control" placeholder="hijab after marriage"></div>
                           </div>
                           <div class="col-sm-6" *ngIf = "com == 'muslim'">
                                 <label>Quran</label>
-                                <div class="form__input"><input type="text" formControlName = "quran" class="form-control" placeholder="Birth time"></div>
+                                <div class="form__input"><input type="text" formControlName = "quran" class="form-control" placeholder="quran"></div>
                           </div>  
                               
               </div>
@@ -163,7 +167,8 @@
               <div class="l-row">
                 <div class="col-sm-6">
                   <label>Occupation</label>
-                  <div class="form__input"><input type="text" formControlName = "occupation" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "occupation" class="form-control" placeholder="occupation"></div>
+                  <app-show-errors [control]="myform.controls.occupation"></app-show-errors>
                 </div>
                                               
               </div>
@@ -181,21 +186,25 @@
               <div class="l-row">
                 <div class="col-sm-6">
                   <label>Father</label>
-                  <div class="form__input"><input type="text" formControlName = "father" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "father" class="form-control" placeholder="father"></div>
+                  <app-show-errors [control]="myform.controls.father"></app-show-errors>
                 </div>
                 <div class="col-sm-6">
                   <label>Mother</label>
-                  <div class="form__input"><input type="text" formControlName = "mother" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "mother" class="form-control" placeholder="mother"></div>
+                  <app-show-errors [control]="myform.controls.mother"></app-show-errors>
                 </div>
 
                 <div class="col-sm-6">
                   <label>Brother</label>
-                  <div class="form__input"><input type="text" formControlName = "brother" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "brother" class="form-control" placeholder="brother"></div>
+                  <app-show-errors [control]="myform.controls.brother"></app-show-errors>
                 </div>
 
                 <div class="col-sm-6">
                   <label>Sister</label>
-                  <div class="form__input"><input type="text" formControlName = "sister" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "sister" class="form-control" placeholder="sister"></div>
+                  <app-show-errors [control]="myform.controls.sister"></app-show-errors>
                 </div>
 
                               
@@ -213,11 +222,13 @@
               <div class="l-row">
                   <div class="col-sm-6">
                       <label>Phone No.</label>
-                      <div class="form__input"><input type="text" formControlName = "phone_no" class="form-control" placeholder="Birth time"></div>
+                      <div class="form__input"><input type="text" formControlName = "phone_no" class="form-control" placeholder="phone"></div>
+                      <app-show-errors [control]="myform.controls.phone_no"></app-show-errors>
                     </div>
                 <div class="col-sm-6">
                   <label>Email</label>
-                  <div class="form__input"><input type="text" formControlName = "email" class="form-control" placeholder="Birth time"></div>
+                  <div class="form__input"><input type="text" formControlName = "email" class="form-control" placeholder="email"></div>
+                  <app-show-errors [control]="myform.controls.email"></app-show-errors>
                 </div>
 
                                               
@@ -235,11 +246,11 @@
                 <div class="l-row">
                     <div class="col-sm-6">
                         <label>Name of The Church</label>
-                        <div class="form__input"><input type="text" formControlName = "name_of_the_church" class="form-control" placeholder="Birth time"></div>
+                        <div class="form__input"><input type="text" formControlName = "name_of_the_church" class="form-control" placeholder="name of the church"></div>
                       </div>
                   <div class="col-sm-6">
                     <label>Caste Preference</label>
-                    <div class="form__input"><input type="text" formControlName = "caste_preference" class="form-control" placeholder="Birth time"></div>
+                    <div class="form__input"><input type="text" formControlName = "caste_preference" class="form-control" placeholder="caste pref."></div>
                   </div>
 
                                                 
