@@ -15,14 +15,14 @@ export class SikhComponent implements OnInit {
   ngOnInit() {
     $('.slick-track').slick({
       centerMode: true,
-      centerPadding: '60px',
+      centerPadding: '180px',
       //appendArrows: '.slick-track',
       appendArrows: ('.slick-arrows'),
       infinite: true,
-      slidesToShow: 5,
+      slidesToShow: 3,
       speed: 500,
       arrows:true,
-     
+      focusOnSelect: true
   });
 
   $('.slick-prev').on('click', function(){
