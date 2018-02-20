@@ -16,7 +16,8 @@ import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.com
 import { ModelFormComponent } from './model-form';
 import { PaymentTemplateComponent } from './payment-template/payment-template.component';
 
-
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
@@ -31,7 +32,10 @@ export const routes: Routes = [
     {path: 'select-template-sikh', component: SikhComponent},
     {path: 'form', component: ModelFormComponent},
     {path: 'payment', component: PaymentTemplateComponent},
+    {path: 'terms', component: TermsComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: '504', component: ServerErrorComponent},
-    {path: '**', component: PageNotFoundComponent}
+    {path: '**', component: PageNotFoundComponent},
+   
 ];
 
