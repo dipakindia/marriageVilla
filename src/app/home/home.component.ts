@@ -7,6 +7,7 @@ import {Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
  import {Observable} from "rxjs/Observable";
  import { DataService } from './../data.service';
+ import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -40,6 +41,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    $("#random").skippr({
+			navType: 'bubble',
+			transition: 'fade',
+			autoPlay: true,
+			autoPlayDuration: 4000,
+			speed: 1000,
+			arrows: false
+		});
+		/* $("#weddingcarousel").owlCarousel({
+			items : 4,
+			itemsScaleUp : true,
+			navigationText : ["prev","next"]
+			}) */
   }
+
 
 }
