@@ -9,7 +9,7 @@
     <div id="signup">   
       <h1>Sign Up for Free</h1>
       <!-- <pre>{{ myform.value | json }}</pre> -->
-      <form action="/" method="post" [formGroup]="myform">
+      <form action="/" method="post" [formGroup]="myform" (submit)="getRegister()">
         <p class="error" *ngIf="error">{{ error }}</p>
       <div class="top-row">
         <div class="field-wrap">
@@ -38,10 +38,10 @@
         <label>
           Set A Password<span class="req">*</span>
         </label>
-        <input type="password"required autocomplete="off" formControlName = "password"/>
+        <input type="password" required autocomplete="off" formControlName = "password"/>
       </div>
       
-      <button type="submit" class="button button-block" (click)="getRegister()">Get Started</button>
+      <button type="submit" class="button button-block" >Get Started</button>
       
       </form>
 

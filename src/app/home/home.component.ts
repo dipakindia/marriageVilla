@@ -41,14 +41,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    $("#random").skippr({
-			navType: 'bubble',
-			transition: 'fade',
-			autoPlay: true,
-			autoPlayDuration: 4000,
-			speed: 1000,
-			arrows: false
-		});
+      /* $("#random").skippr({
+        navType: 'bubble',
+        transition: 'fade',
+        autoPlay: true,
+        autoPlayDuration: 4000,
+        speed: 1000,
+        arrows: false
+      }); */
 		/* $("#weddingcarousel").owlCarousel({
 			items : 4,
 			itemsScaleUp : true,

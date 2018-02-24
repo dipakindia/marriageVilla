@@ -2,7 +2,7 @@
 <div class="black_shadow"></div>
 <h3 class="select-template-heading">Select your templates:</h3>
 
-<div *ngIf = "current_community == 'hindu'"><app-hindu (goToFormdata) = "goToForm($event)"></app-hindu></div>
-<div *ngIf = "current_community == 'muslim'" ><app-islam (goToFormdata) = "goToForm($event)"></app-islam></div>
-<div *ngIf = "current_community == 'christian'" ><app-christian (goToFormdata) = "goToForm($event)"></app-christian></div>
-<div *ngIf = "current_community == 'sikh'" ><app-sikh (goToFormdata) = "goToForm($event)"></app-sikh></div>   
+<div *ngIf = "current_community == 'hindu'"><app-hindu (goToFormdata) = "goToForm($event)" (zoomEmit) = "getZoomImage($event)"></app-hindu></div>
+<div *ngIf = "current_community == 'muslim'" ><app-islam (goToFormdata) = "goToForm($event)" (zoomEmit) = "getZoomImage($event)"></app-islam></div>
+<div *ngIf = "current_community == 'christian'" ><app-christian (goToFormdata) = "goToForm($event)" (zoomEmit) = "getZoomImage($event)"></app-christian></div>
+<div *ngIf = "current_community == 'sikh'" ><app-sikh (goToFormdata) = "goToForm($event)" (zoomEmit) = "getZoomImage($event)"></app-sikh></div>   

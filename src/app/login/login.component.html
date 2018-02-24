@@ -7,14 +7,12 @@
 <!-- <li><a (click)="FacebookLoginFunction()" class="btn btn-primary btn-block">Facebook</a></li>
 <li><a (click)="GoogleLoginFunction()" class="btn btn-primary btn-block">Google</a></li>
  -->
- <li><a (click)="signInWithFB()" class="btn btn-primary btn-block">Facebook</a></li>
-<li><a (click)="signInWithGoogle()" class="btn btn-primary btn-block">Google</a></li>
+
 
 </ul>
   
   <div class="tab-content">    
     <div id="login">   
-      <h1>Welcome Back!</h1>
       <form action="/" [formGroup]="myform"  method="post">
       <p *ngIf="error">{{ error }}</p>
         <div class="field-wrap">
@@ -36,7 +34,13 @@
       <button class="button button-block" (click) = "getLogin()">Log In</button>
       
       </form>
-
+      <h3 class="social-header">--------  OR LOG IN WITH  --------</h3>
+      <div class="social-login">
+        <ul>
+          <li class="fb-login btn"><a (click)="signInWithFB()" class="btn btn-primary btn-block"> <i class="fa fa-facebook"></i> Facebook</a></li>
+          <li class="gplus-login btn"><a (click)="signInWithGoogle()" class="btn btn-primary btn-block"> <i class="fa fa-google-plus"></i>Google</a></li>
+        </ul>
+      </div>
     </div>
     
   </div><!-- tab-content -->

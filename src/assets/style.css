@@ -1962,6 +1962,7 @@ span.swirl_right_transparent{
 
 .banner-one{
 	background-image: url('images/slider/slide1.jpg');
+	height:625px;
 }
 .banner-two{
 	background-image: url('images/slider/slide2.jpg');
@@ -2042,3 +2043,21 @@ span.swirl_right_transparent{
     float: right;
 }
 .full-width-popup{ width:100%; max-width:none !important;}
+.btn {
+    transition: background .4s ease-in-out, border-color .4s ease-in-out, color .4s ease-in-out, box-shadow .4s ease-in-out;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    text-decoration: none;
+    font-weight: 400;
+    border-style: solid;
+}
+

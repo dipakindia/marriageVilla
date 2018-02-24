@@ -9,6 +9,7 @@ import * as $ from 'jquery';
 })
 export class IslamComponent implements OnInit {
   @Output() goToFormdata: EventEmitter<any> = new EventEmitter();
+  @Output() zoomEmit: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -22,17 +23,20 @@ export class IslamComponent implements OnInit {
       speed: 500,
       arrows:true,
       focusOnSelect: true
-  });
+    });
 
-  $('.slick-prev').on('click', function(){
-    $('.slick-track').slick("slickPrev");
-});
+    $('.slick-prev').on('click', function(){
+      $('.slick-track').slick("slickPrev");
+    });
 
-$('.slick-next').on('click', function(){
-  $('.slick-track').slick("slickNext");
-});
+    $('.slick-next').on('click', function(){
+      $('.slick-track').slick("slickNext");
+    });
   }
   goToForm(){
     this.goToFormdata.emit();
+  }
+  getZoomImage(event,comm,id){
+    this.zoomEmit.emit({event:event,comm:comm,id:id});
   }
 }

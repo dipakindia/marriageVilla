@@ -42,10 +42,11 @@ export class TeamComponent implements OnInit {
     return result;
   }
   selectTemplate(event){
-    alert(event.id)
     this.select = event.id;
   }
-  getZoomImage(event,caste,template){
+  getZoomImage(event){
+    var caste = event.comm;
+    var template = event.id;
     let dialogRef = this.dialog.open(PreviewTemplateComponent, {
       width: '35%',
       data: { 'caste':caste, template:template }
