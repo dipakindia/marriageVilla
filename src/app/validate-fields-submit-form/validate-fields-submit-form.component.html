@@ -1,5 +1,12 @@
-<form class="form-horizontal" [formGroup]="form">
 
+<div class="l-content l-col" style="width: 1000px;position: relative;left: 300px; background:#ddd" *ngIf="!loading">
+<div>&nbsp;&nbsp;</div>
+<div>&nbsp;&nbsp;</div>
+<div style="padding-top:60px"></div>
+<form class="form-horizontal" [formGroup]="form">
+{{form.value | json}}
+
+<div class="panel__heading"> Personel Details: </div>
   <div class="form-group" [ngClass]="displayFieldCss('name')">
     <div class="col-sm-12">
       <label for="name" class="control-label required">Name</label>
@@ -9,16 +16,240 @@
     </div>
   </div>
 
-  <div class="form-group" [ngClass]="displayFieldCss('email')">
-    <div class="col-sm-12">
-      <label for="email" class="control-label required">Email</label>
-      <input type="text" id="email" class="form-control" formControlName="email">
-      <app-field-error-display [displayError]="isFieldValid('email')" errorMsg="Please inform your email">
-      </app-field-error-display>
+  <div class="form-group" [ngClass]="displayFieldCss('dob')">
+      <div class="col-sm-12">
+        <label for="dob" class="control-label required">Date of Birth</label>
+        <input type="text" id="birth_palace" class="form-control" formControlName="dob">
+        <app-field-error-display [displayError]="isFieldValid('dob')" errorMsg="Please inform your dob">
+        </app-field-error-display>
+      </div>
     </div>
-  </div>
 
-  <div formGroupName="address">
+  <div class="form-group" [ngClass]="displayFieldCss('birth_palace')">
+      <div class="col-sm-12">
+        <label for="birth_palace" class="control-label required">Birth place</label>
+        <input type="text" id="birth_palace" class="form-control" formControlName="birth_palace">
+        <app-field-error-display [displayError]="isFieldValid('birth_palace')" errorMsg="Please inform your birth_palace">
+        </app-field-error-display>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="displayFieldCss('birth_time')">
+        <div class="col-sm-12">
+          <label for="birth_palace" class="control-label required">Birth time</label>
+          <input type="text" id="birth_time" class="form-control" formControlName="birth_time">
+          <app-field-error-display [displayError]="isFieldValid('birth_time')" errorMsg="Please inform your birth_time">
+          </app-field-error-display>
+        </div>
+      </div>
+
+      <div class="panel__heading"> Physical Attributes </div>
+      <div class="form-group" [ngClass]="displayFieldCss('height')">
+          <div class="col-sm-12">
+            <label for="height" class="control-label required">Height</label>
+            <input type="text" id="height" class="form-control" formControlName="height">
+            <app-field-error-display [displayError]="isFieldValid('height')" errorMsg="Please inform your height">
+            </app-field-error-display>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="displayFieldCss('weight')">
+            <div class="col-sm-12">
+              <label for="weight" class="control-label required">Weight</label>
+              <input type="text" id="weight" class="form-control" formControlName="weight">
+              <app-field-error-display [displayError]="isFieldValid('weight')" errorMsg="Please inform your weight">
+              </app-field-error-display>
+            </div>
+          </div>
+
+          <div class="form-group" [ngClass]="displayFieldCss('complexion')">
+              <div class="col-sm-12">
+                <label for="complexion" class="control-label required">Complexion</label>
+                <input type="text" id="complexion" class="form-control" formControlName="complexion">
+                <app-field-error-display [displayError]="isFieldValid('complexion')" errorMsg="Please inform your complexion">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="panel__heading"> Qualification </div>
+
+            <div class="form-group" [ngClass]="displayFieldCss('education')">
+                <div class="col-sm-12">
+                  <label for="education" class="control-label required">Education</label>
+                  <input type="text" id="education" class="form-control" formControlName="education">
+                  <app-field-error-display [displayError]="isFieldValid('education')" errorMsg="Please inform your education">
+                  </app-field-error-display>
+                </div>
+              </div>
+
+              <div class="form-group" [ngClass]="displayFieldCss('profession')">
+                  <div class="col-sm-12">
+                    <label for="profession" class="control-label required">Profession</label>
+                    <input type="text" id="profession" class="form-control" formControlName="profession">
+                    <app-field-error-display [displayError]="isFieldValid('profession')" errorMsg="Please inform your profession">
+                    </app-field-error-display>
+                  </div>
+                </div>
+
+                <div class="form-group" [ngClass]="displayFieldCss('currently_working')">
+                    <div class="col-sm-12">
+                      <label for="currently_working" class="control-label required">Currently working</label>
+                      <input type="text" id="currently_working" class="form-control" formControlName="currently_working">
+                      <app-field-error-display [displayError]="isFieldValid('currently_working')" errorMsg="Please inform your currently_working">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+
+                  <div class="form-group" [ngClass]="displayFieldCss('hobbies')">
+                      <div class="col-sm-12">
+                        <label for="hobbies" class="control-label required">Hobbies</label>
+                        <input type="text" id="hobbies" class="form-control" formControlName="hobbies">
+                        <app-field-error-display [displayError]="isFieldValid('hobbies')" errorMsg="Please inform your hobbies">
+                        </app-field-error-display>
+                      </div>
+                    </div>
+
+                    <div class="panel__heading"> Religion: </div>
+                    <div class="form-group" [ngClass]="displayFieldCss('cast')">
+                        <div class="col-sm-12">
+                          <label for="cast" class="control-label required">Caste</label>
+                          <input type="text" id="cast" class="form-control" formControlName="cast">
+                          <app-field-error-display [displayError]="isFieldValid('cast')" errorMsg="Please inform your cast">
+                          </app-field-error-display>
+                        </div>
+                      </div>
+
+                      <div class="form-group" [ngClass]="displayFieldCss('sub_cast')">
+                          <div class="col-sm-12">
+                            <label for="sub_cast" class="control-label required">Hobbies</label>
+                            <input type="text" id="sub_cast" class="form-control" formControlName="sub_cast">
+                            <app-field-error-display [displayError]="isFieldValid('sub_cast')" errorMsg="Please inform your sub_cast">
+                            </app-field-error-display>
+                          </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="displayFieldCss('gotra')">
+                            <div class="col-sm-12">
+                              <label for="gotra" class="control-label required">Gotra</label>
+                              <input type="text" id="gotra" class="form-control" formControlName="gotra">
+                              <app-field-error-display [displayError]="isFieldValid('gotra')" errorMsg="Please inform your gotra">
+                              </app-field-error-display>
+                            </div>
+                          </div>
+
+                          <div class="form-group" [ngClass]="displayFieldCss('maththab')">
+                              <div class="col-sm-12">
+                                <label for="maththab" class="control-label required">Maththab</label>
+                                <input type="text" id="maththab" class="form-control" formControlName="maththab">
+                                <app-field-error-display [displayError]="isFieldValid('maththab')" errorMsg="Please inform your maththab">
+                                </app-field-error-display>
+                              </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="displayFieldCss('speak_urdu')">
+                                <div class="col-sm-12">
+                                  <label for="speak_urdu" class="control-label required">Speak urdu</label>
+                                  <input type="text" id="speak_urdu" class="form-control" formControlName="speak_urdu">
+                                  <app-field-error-display [displayError]="isFieldValid('speak_urdu')" errorMsg="Please inform your speak_urdu">
+                                  </app-field-error-display>
+                                </div>
+                              </div>
+                              <div class="form-group" [ngClass]="displayFieldCss('namaz')">
+                                  <div class="col-sm-12">
+                                    <label for="namaz" class="control-label required">Namaz</label>
+                                    <input type="text" id="namaz" class="form-control" formControlName="namaz">
+                                    <app-field-error-display [displayError]="isFieldValid('namaz')" errorMsg="Please inform your namaz">
+                                    </app-field-error-display>
+                                  </div>
+                              </div> 
+                              <div class="form-group" [ngClass]="displayFieldCss('fasting')">
+                                  <div class="col-sm-12">
+                                    <label for="fasting" class="control-label required">Fasting</label>
+                                    <input type="text" id="fasting" class="form-control" formControlName="fasting">
+                                    <app-field-error-display [displayError]="isFieldValid('fasting')" errorMsg="Please inform your fasting">
+                                    </app-field-error-display>
+                                  </div>
+                                </div> 
+                                <div class="form-group" [ngClass]="displayFieldCss('hijab_after_marriage')">
+                                    <div class="col-sm-12">
+                                      <label for="hijab_after_marriage" class="control-label required">hijab after marriage</label>
+                                      <input type="text" id="hijab_after_marriage" class="form-control" formControlName="hijab_after_marriage">
+                                      <app-field-error-display [displayError]="isFieldValid('hijab_after_marriage')" errorMsg="Please inform your hijab_after_marriage">
+                                      </app-field-error-display>
+                                    </div>
+                                  </div>
+                                  <div class="form-group" [ngClass]="displayFieldCss('quran')">
+                                      <div class="col-sm-12">
+                                        <label for="quran" class="control-label required">quran</label>
+                                        <input type="text" id="quran" class="form-control" formControlName="quran">
+                                        <app-field-error-display [displayError]="isFieldValid('quran')" errorMsg="Please inform your quran">
+                                        </app-field-error-display>
+                                      </div>
+                                    </div>
+                    <div class="panel__heading"> Occupation: </div>       
+
+                    <div class="form-group" [ngClass]="displayFieldCss('occupation')">
+                        <div class="col-sm-12">
+                          <label for="occupation" class="control-label required">Occupation</label>
+                          <input type="text" id="occupation" class="form-control" formControlName="occupation">
+                          <app-field-error-display [displayError]="isFieldValid('occupation')" errorMsg="Please inform your occupation">
+                          </app-field-error-display>
+                        </div>
+                      </div> 
+                  
+                 <div class="panel__heading"> Family Details: </div>
+                      <div class="form-group" [ngClass]="displayFieldCss('father')">
+                          <div class="col-sm-12">
+                            <label for="father" class="control-label required">Father</label>
+                            <input type="text" id="father" class="form-control" formControlName="father">
+                            <app-field-error-display [displayError]="isFieldValid('father')" errorMsg="Please inform your father">
+                            </app-field-error-display>
+                          </div>
+                      </div>  
+                      <div class="form-group" [ngClass]="displayFieldCss('mother')">
+                          <div class="col-sm-12">
+                            <label for="mother" class="control-label required">Mother</label>
+                            <input type="text" id="mother" class="form-control" formControlName="mother">
+                            <app-field-error-display [displayError]="isFieldValid('mother')" errorMsg="Please inform your mother">
+                            </app-field-error-display>
+                          </div>
+                      </div>  
+                      <div class="form-group" [ngClass]="displayFieldCss('sister')">
+                          <div class="col-sm-12">
+                            <label for="sister" class="control-label required">Sister</label>
+                            <input type="text" id="sister" class="form-control" formControlName="sister">
+                            <app-field-error-display [displayError]="isFieldValid('sister')" errorMsg="Please inform your sister">
+                            </app-field-error-display>
+                          </div>
+                      </div> 
+                      <div class="form-group" [ngClass]="displayFieldCss('brother')">
+                          <div class="col-sm-12">
+                            <label for="brother" class="control-label required">Brother</label>
+                            <input type="text" id="brother" class="form-control" formControlName="brother">
+                            <app-field-error-display [displayError]="isFieldValid('brother')" errorMsg="Please inform your brother">
+                            </app-field-error-display>
+                          </div>
+                      </div>          
+               <div class="panel__heading"> Contact Details: </div>    
+                 <div class="form-group" [ngClass]="displayFieldCss('phone_no')">
+                    <div class="col-sm-12">
+                      <label for="phone_no" class="control-label required">Phone no</label>
+                      <input type="text" id="phone_no" class="form-control" formControlName="phone_no">
+                      <app-field-error-display [displayError]="isFieldValid('phone_no')" errorMsg="Please inform your phone_no">
+                      </app-field-error-display>
+                    </div>
+                </div>       
+
+                <div class="form-group" [ngClass]="displayFieldCss('email')">
+                  <div class="col-sm-12">
+                    <label for="email" class="control-label required">Email</label>
+                    <input type="text" id="email" class="form-control" formControlName="email">
+                    <app-field-error-display [displayError]="isFieldValid('email')" errorMsg="Please inform your email">
+                    </app-field-error-display>
+                  </div>
+                </div>
+
+  <!--<div formGroupName="address">
 
     <div class="form-group">
 
@@ -67,9 +298,11 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
   <button class="btn" (click)="reset()">Reset</button>
 
 </form>
+
+</div>
