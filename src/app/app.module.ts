@@ -1,3 +1,5 @@
+import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
+import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
 import { DataService } from './data.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
@@ -65,7 +67,8 @@ let config = new AuthServiceConfig([
     AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
-    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent, HinduComponent, IslamComponent, SikhComponent, ChristianComponent, ShowErrorsComponent, TermsComponent, PrivacyPolicyComponent
+    NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent, HinduComponent,FieldErrorDisplayComponent,
+    IslamComponent, SikhComponent, ChristianComponent, ShowErrorsComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,

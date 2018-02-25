@@ -1,3 +1,4 @@
+import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
 import { SikhComponent } from './team/common/sikh/sikh.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddPersonalInfoComponent } from './add-personal-info/add-personal-info.component';
@@ -34,6 +35,7 @@ export const routes: Routes = [
     {path: 'payment', component: PaymentTemplateComponent},
     {path: 'terms', component: TermsComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
+    {path: 'validation-form', component: ValidateFieldsSubmitFormComponent},
     {path: '504', component: ServerErrorComponent},
     {path: '**', component: PageNotFoundComponent},
    

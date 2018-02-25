@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.error-msg {
+    background: red;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-top: 3px;
+    width: inherit;
+    display: inline-block;
+}
