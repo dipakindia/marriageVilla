@@ -7,7 +7,7 @@ import {Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
  import {Observable} from "rxjs/Observable";
  import { DataService } from './../data.service';
- import * as $ from 'jquery';
+ //import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
