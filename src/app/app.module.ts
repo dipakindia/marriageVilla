@@ -46,7 +46,6 @@ import { HinduComponent } from './team/common/hindu/hindu.component';
 import { IslamComponent } from './team/common/islam/islam.component';
 import { SikhComponent } from './team/common/sikh/sikh.component';
 import { ChristianComponent } from './team/common/christian/christian.component';
-import { ShowErrorsComponent } from './show-errors/show-errors.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
@@ -68,7 +67,7 @@ let config = new AuthServiceConfig([
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
     NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent, HinduComponent,FieldErrorDisplayComponent,
-    IslamComponent, SikhComponent, ChristianComponent, ShowErrorsComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent
+    IslamComponent, SikhComponent, ChristianComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,
