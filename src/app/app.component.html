@@ -7,11 +7,11 @@
     <a routerLink = "/" class="logo"><img src="assets/images/logo.png" /></a>                                                                 
       <ul id="main_menu">
           <li><a routerLink = "/my-biodata" >My Biodata</a></li>
-          <li><a routerLink = "/blog">BLOG</a></li>
+          <li><a routerLink = "/blog">Blog</a></li>
           <li><a routerLink = "/about-us">About Us</a></li>
           <li><a routerLink = "/contact-us">Contact Us</a></li> 
-          <li class="my-account" *ngIf = "!userLoggedIn" >
-                <button mat-button [matMenuTriggerFor]="menu">My Account</button>
+          <li class="my-account" *ngIf = "!userLoggedIn" >  
+                <button mat-button [matMenuTriggerFor]="menu"> <!-- <i class="fa fa-user fa-stack-1x"></i> --> My Account</button>
                 <mat-menu #menu="matMenu">
                 <button mat-menu-item (click) = "gotologin($event)">Login</button>
                 <button mat-menu-item (click) = "gotoregister($event)">Register</button>

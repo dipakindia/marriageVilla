@@ -249,14 +249,16 @@ nav.menu{
 	height:65px;
 	position:fixed;
 	top:0px;
-	z-index:999;
-	background-color: #666;
-	opacity: 0.7;
+	z-index:99999;
+	background-color: #fff;
+	border-bottom: 1px solid #999;
 }
-ul#main_menu{
-	list-style:none;
-	margin:0;
-	padding:0px;
+ul#main_menu {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    width: 660px;
+    float: right;
 }
 ul#main_menu *{
 	margin:0;
@@ -272,10 +274,22 @@ ul#main_menu li a{
 	font-size:15px;
 	line-height:65px;
 	display:inline-block;
-	color:#FFFFFF;
+	color:#000;
 	padding:0 0 0 18px;
-	font-weight:bold;
-	text-transform: uppercase;
+	text-transform: capitalize;
+    text-shadow: 0px 1px 0px #000;
+}
+.mat-menu-panel.mat-menu-after.mat-menu-below {
+    transform-origin: left top;
+    position: relative;
+    top: 50px;
+    width: 170px;
+    right: 57px;
+}
+span.mat-button-wrapper {
+    text-transform: capitalize !important;
+    font-size: 16px;
+    text-shadow: 0px 1px 0px #000;
 }
 ul#main_menu ul {
 	position:absolute;
@@ -2048,12 +2062,6 @@ span.swirl_right_transparent{
 	
 }
 
-<<<<<<< HEAD
-
-
-
-
-=======
 .banner-one{
 	background-image: url('images/slider/slide1.jpg');
 	height:625px;
@@ -2154,5 +2162,3 @@ span.swirl_right_transparent{
     font-weight: 400;
     border-style: solid;
 }
->>>>>>> 3034d7f017a77bc81ad410cc2ff479dd1cead58a
-
