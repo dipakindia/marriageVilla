@@ -504,6 +504,8 @@ html {
         padding-right: 15px;
         padding-left: 15px
     }
+
+    
 }
 
 @media (min-width: 768px) {
@@ -781,6 +783,9 @@ html {
         padding-right: 15px;
         padding-left: 15px
     }
+    .signup-newsletter .col-md-3{width:auto;}
+    .signup-newsletter .col-md-2{padding-right:0}
+    
 }
 
 @media (min-width: 768px) {
