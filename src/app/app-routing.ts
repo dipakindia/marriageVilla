@@ -36,6 +36,7 @@ export const routes: Routes = [
     {path: 'terms', component: TermsComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'validation-form', component: ValidateFieldsSubmitFormComponent},
+    {path: 'biodata-information', component: AddPersonalInfoComponent},
     {path: '504', component: ServerErrorComponent},
     {path: '**', component: PageNotFoundComponent},
    

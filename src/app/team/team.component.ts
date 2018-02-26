@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AddPersonalInfoComponent } from './../add-personal-info/add-personal-info.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA,MatDialog } from '@angular/material';
@@ -24,7 +25,7 @@ export class TeamComponent implements OnInit {
   public third:number = 3;
   public fourth:number = 4;
   public current_community:string;
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog,private router: Router) {
     this.community = this.community.filter(data => data.comm === localStorage.getItem('set_community'));    
     this.current_community = localStorage.getItem('set_community');
    }
@@ -53,6 +54,7 @@ export class TeamComponent implements OnInit {
     });
   }
   goToForm(){
+    this.router.navigate(['biodata-information']);
     let dialogRef = this.dialog.open(AddPersonalInfoComponent, {
       width: '100%',
       height: '100%',

@@ -1,10 +1,10 @@
 
-<div class="l-content l-col" style="width: 1000px;position: relative;left: 300px; background:#ddd" *ngIf="!loading">
+<div class="l-content l-col" style="width: calc(100% - 300px);position: relative;left: 300px; background:#ddd" *ngIf="!loading">
 <div>&nbsp;&nbsp;</div>
 <div>&nbsp;&nbsp;</div>
 <div style="padding-top:60px"></div>
 <form class="form-horizontal" [formGroup]="form">
-{{form.value | json}}
+<!-- {{form.value | json}} -->
 
 <div class="panel__heading"> Personel Details: </div>
   <div class="form-group" [ngClass]="displayFieldCss('name')">

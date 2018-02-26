@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
@@ -9,12 +11,12 @@ import {
 @Component({
   selector: 'app-validate-fields-submit-form',
   templateUrl: './validate-fields-submit-form.component.html',
-  styles: []
+  styles: ['.form-group {width: 49%; display: inline-flex; margin-bottom: 10px;}button.btn {background: #369;padding: 10px 30px !important; display: inline-flex; width: 125px; margin: 20px; text-align: center; color: #fff; font-size: 15px;}']
 })
 export class ValidateFieldsSubmitFormComponent implements OnInit {
   form: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {}
+  loading:boolean = false;
+  constructor(private data_service:DataService,private formBuilder: FormBuilder,private router: Router) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -70,6 +72,61 @@ export class ValidateFieldsSubmitFormComponent implements OnInit {
   onSubmit() {
     console.log(this.form);
     if (this.form.valid) {
+      var formData = this.form.value;
+    var data = {
+      'personel_details': {
+        'name': formData.name,
+        'date_of_birth': formData.dob,
+        'birth_palace': formData.birth_palace,
+        'birth_time': formData.birth_time
+      },
+      "physical_attributes":{
+        "height": formData.height,
+        "weight": formData.weight,
+        "complexion": formData.comlexion
+      },
+      "qualification": {
+        "education": formData.education,
+        "profession": formData.profession,
+        "currently_working": formData.currently_working,
+        "hobbies": formData.hobbies
+      },
+      "religion":{
+        "cast": formData.cast,
+        "sub_cast": formData.sub_cast,
+        "gotra": formData.gotra,
+        "maththab": formData.maththab,
+        "speak_urdu": formData.speak_urdu,
+        "namaz": formData.namaz,
+        "fasting": formData.fasting,
+        "hijab_after_marriage": formData.hijab_after_marriage,
+        "quran": formData.quran
+      },
+      "occupation":formData.occupation,
+      "family_details":{
+        "father": formData.father,
+        "mother": formData.mother,
+        "sister": formData.sister,
+        "brother": formData.brother
+      },
+      "contact_details":{
+        "phone_no": formData.phone_no,
+        "email": formData.email
+      },
+      "beliefs":{
+        "name_of_the_church": formData.name_of_the_church,
+        "caste_preference": formData.caste_preference
+      }
+    }
+    this.loading = true;
+    this.data_service.addBioDataInformation(data).subscribe((res: Response) => {
+      if(res.status == 1){
+        this.router.navigate(['/payment']);
+      }else{
+        this.loading = false;
+      }
+      return res;
+  });
       console.log('successfully form submitted');
     } else {
       this.validateAllFormFields(this.form);

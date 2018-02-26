@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms'; 
 
@@ -8,11 +9,22 @@ import { FormBuilder } from '@angular/forms';
 })
 export class NewsLetterComponent implements OnInit {
   public news_letter_text:string = '';
-  constructor(private formBuilder: FormBuilder) { }
+  public msg:string;
+  public success:string;
+  constructor(private formBuilder: FormBuilder, private data_service: DataService) { }
 
   ngOnInit() {
   }
-  submitNewsLetter(){
-    alert(this.news_letter_text);
+  submitNewsLetter(){ 
+    this.data_service.addNewsLetter({email:this.news_letter_text}).subscribe(result=>{
+      if(result['statusCode'] == 1){
+        this.success = result['msg'];
+        this.msg = '';
+      }else{
+        this.msg = result['msg'];
+        this.success = '';
+        
+      }
+    });
   }
 }
