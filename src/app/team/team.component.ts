@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AddPersonalInfoComponent } from './../add-personal-info/add-personal-info.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA,MatDialog } from '@angular/material';
@@ -23,35 +24,13 @@ export class TeamComponent implements OnInit {
   public second:number = 2;
   public third:number = 3;
   public fourth:number = 4;
-  constructor(public dialog: MatDialog) {
+  public current_community:string;
+  constructor(public dialog: MatDialog,private router: Router) {
     this.community = this.community.filter(data => data.comm === localStorage.getItem('set_community'));    
+    this.current_community = localStorage.getItem('set_community');
    }
 
-  ngOnInit() {
-    
-    $('.slick-track').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      //appendArrows: '.slick-track',
-      appendArrows: ('.slick-arrows'),
-      infinite: true,
-      slidesToShow: 5,
-      speed: 500,
-      arrows:true,
-     
-  });
-
-  $('.slick-prev').on('click', function(){
-    $('.slick-track').slick("slickPrev");
-});
-
-$('.slick-next').on('click', function(){
-  $('.slick-track').slick("slickNext");
-});
-
- 
-
-  }
+  ngOnInit() { }
   get getTemplateList(){
     var result = [];
     this.community.forEach(data => {
@@ -63,16 +42,19 @@ $('.slick-next').on('click', function(){
     })
     return result;
   }
-  selectTemplate(event,j){
-    this.select = j;
+  selectTemplate(event){
+    this.select = event.id;
   }
-  getZoomImage(event,caste,template){
+  getZoomImage(event){
+    var caste = event.comm;
+    var template = event.id;
     let dialogRef = this.dialog.open(PreviewTemplateComponent, {
       width: '35%',
       data: { 'caste':caste, template:template }
     });
   }
   goToForm(){
+    this.router.navigate(['biodata-information']);
     let dialogRef = this.dialog.open(AddPersonalInfoComponent, {
       width: '100%',
       height: '100%',
@@ -80,22 +62,6 @@ $('.slick-next').on('click', function(){
       data: {  }
     });
   }
-
- btnPrev(){
-    this.a--;
-    this.first--;
-    this.second--;
-    this.third--;
-    this.fourth--;
-  }
-  btnNext(){
-    this.a++;
-    this.first++;
-    this.second++;
-    this.third ++;
-    this.fourth++;
-  }
-
 
 
 }

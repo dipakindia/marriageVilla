@@ -118,7 +118,7 @@
     display: none;
 }
 
-.slick-slide{margin: 4rem 2rem;
+.slick-slide{margin: 20px 20px;
     /*background: rgba(0,0,0,0.09) !important;*/
     opacity: 0.5;
     -webkit-transform: scale(1);

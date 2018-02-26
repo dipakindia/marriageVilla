@@ -210,3 +210,18 @@
     font-weight: 700;
     color: #fff !important;
 }
+
+.love_para{
+    font-size: 14px;
+    font-weight: 400;
+}
+.left13 {
+    width: 325px;
+    float: left;
+    margin: 0 40px 80px 0;
+}
+.comm-title{
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+}

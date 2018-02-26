@@ -1,3 +1,5 @@
+import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
+import { SikhComponent } from './team/common/sikh/sikh.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddPersonalInfoComponent } from './add-personal-info/add-personal-info.component';
 import { BiodataComponent } from './biodata/biodata.component';
@@ -15,7 +17,8 @@ import { BlogDetailPageComponent } from './blog-detail-page/blog-detail-page.com
 import { ModelFormComponent } from './model-form';
 import { PaymentTemplateComponent } from './payment-template/payment-template.component';
 
-
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 export const routes: Routes = [
     {path: '', redirectTo: '/home',  pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
@@ -27,9 +30,15 @@ export const routes: Routes = [
     { path: 'blog/:id', component: BlogDetailPageComponent},
     {path: 'contact-us', component: ContactUsComponent},
     {path: 'select-template', component: TeamComponent},
+    {path: 'select-template-sikh', component: SikhComponent},
     {path: 'form', component: ModelFormComponent},
     {path: 'payment', component: PaymentTemplateComponent},
+    {path: 'terms', component: TermsComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyComponent},
+    {path: 'validation-form', component: ValidateFieldsSubmitFormComponent},
+    {path: 'biodata-information', component: AddPersonalInfoComponent},
     {path: '504', component: ServerErrorComponent},
-    {path: '**', component: PageNotFoundComponent}
+    {path: '**', component: PageNotFoundComponent},
+   
 ];
 

@@ -34,3 +34,21 @@
 .snippets{
 margin: 10px 0;
 }
+
+.blog-img{   
+border: 1px solid #ddd;
+padding: 5px;
+margin: 10px 0px;
+}
+.post-title
+{
+font-size: 28px;
+text-align: left;
+font-weight: 600;
+}
+
+ul li {
+    content: url(http://themes.sindevo.com/wedding-bells/images/bullet.gif) no-repeat left;
+    padding: 0 0 0 20px;
+    margin: 10px 0 !important;
+}

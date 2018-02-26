@@ -31,6 +31,13 @@ export class DataService {
     const body = new HttpParams().set('action','registration').set('name', name).set('email',email).set('mobile',mobile).set('password',password);
     return this._http.post(environment.api_url, body,{headers:myheader });
   }
+  addNewsLetter(data){
+    var name = data.fname + ' ' + data.lname;
+    var email = data.email;
+    const myheader = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    const body = new HttpParams().set('action','news_letter').set('email',email);
+    return this._http.post(environment.api_url, body,{headers:myheader});
+  }
   getBlog(){
     return this._http.get(environment.blog_url+'posts').map(dt =>dt);
   }

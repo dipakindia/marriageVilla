@@ -65,7 +65,10 @@ small {
     width: 100px;
     height: 3px;
     background-color: #F97D38;
+    margin: 0 auto;
 }
+
+
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -97,8 +100,4 @@ hr {
     height: 110px;
     overflow-y: scroll;
 }
-.col-md-12 p {
-    color: #369;
-    font: 30px/40px calibri;
-    text-shadow: 0px 0px 1px #000;
-}
+

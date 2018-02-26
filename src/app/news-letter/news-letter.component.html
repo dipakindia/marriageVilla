@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
             <div style="visibility: visible; animation-name: zoomIn;" class="col-sm-12 text-center section-padding">
-                <h3>Join Our Newsletter</h3>
+                <h3 class="newslettr-title">Join Our Newsletter</h3>
+                    <span *ngIf ="msg" style="background: red;border-radius: 3px;padding: 5px 10px;display:  inline-block;margin-bottom: 10px;color: #fff;">{{ msg }}</span>
+                    <span *ngIf ="success" style="background: green;border-radius: 3px;padding: 5px 10px;display:  inline-block;margin-bottom: 10px;color: #fff;">{{ success }}</span>
                    <div class="form-group">
                      <div class="row">
                        <div class="col-md-3"></div>

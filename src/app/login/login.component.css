@@ -138,4 +138,21 @@
   .forgot {     
     text-align: right;
   }
-  
+  h3.social-header {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+li.btn {
+  padding: 10px 15px !important;
+  color: #fff;
+  margin: 0 20px;
+  font-size: 15px;
+  border-radius: 3px;
+}
+li.fb-login.btn {
+  background: #369;
+}
+li.gplus-login.btn {
+  background: #d04028;
+}
