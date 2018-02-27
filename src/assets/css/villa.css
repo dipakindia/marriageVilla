@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 680px) {
+    img{max-width: 100%;}
+   .heading{ font-size: 44px;}
+   .left13{width:100%!important;}
+   .horse-car img{max-width:100%;}
+    .signup-newsletter .col-md-3{width:auto;}
+    .signup-newsletter .col-md-2{width:auto; padding-left: 0}
+}

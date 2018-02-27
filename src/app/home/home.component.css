@@ -225,3 +225,9 @@
     font-size: 19px;
     font-weight: 600;
 }
+
+
+@media (max-width: 575px) {
+    .b-info-columns-holder.b-steps-list .b-info-column:before {right:50px;}
+    .view-all-btn{padding-right: 17px!important}
+}

@@ -49,7 +49,7 @@ export class TeamComponent implements OnInit {
     var caste = event.comm;
     var template = event.id;
     let dialogRef = this.dialog.open(PreviewTemplateComponent, {
-      width: '35%',
+      width: '35%', 
       data: { 'caste':caste, template:template }
     });
   }
@@ -63,5 +63,6 @@ export class TeamComponent implements OnInit {
     });
   }
 
+  
 
 }
