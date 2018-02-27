@@ -377,7 +377,7 @@ span.swirl_right{
 /*---------------------------*/	
 .slider_container {
 	width: 100%;
-	height:85%;
+	height:auto;
 	min-height: 500px;
 	position: relative;
 }

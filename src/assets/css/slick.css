@@ -117,7 +117,10 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
-
+.home-section .slick-slide {
+    padding: 0 !important;
+    margin: 0;
+}
 .slick-slide{margin: 20px 20px; 
     /*background: rgba(0,0,0,0.09) !important;*/
     opacity: 0.5;

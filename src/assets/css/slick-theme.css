@@ -74,7 +74,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.home-section .slick-prev { left: 20px;}
+.home-section .slick-next { right: 20px;}
+.home-section .slick-prev, .home-section .slick-next {
+    background: #999;
+    border-radius: 0px;
+    border: 2px solid #666;
+}
+.home-section .slick-slider {
+    margin-bottom: 0;
+}
+.home-section .slick-slide img {
+    border: none;
+}
 .slick-prev
 {
     left: -40px;
