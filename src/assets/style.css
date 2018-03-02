@@ -2162,3 +2162,13 @@ span.swirl_right_transparent{
     font-weight: 400;
     border-style: solid;
 }
+.panel__heading {
+    font-size: 20px;
+    border-bottom: 1px solid red;
+    padding-bottom: 9px;
+    padding-left: 0px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

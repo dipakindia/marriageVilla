@@ -15,35 +15,35 @@
               <div class="l-sidebar__heading o-heading"> <span class="l-sidebar__heading-text o-heading__label">Fill in your document</span> </div>
               <div class="l-sidebar__navigation c-navigation">
                 <ul id="menuSection" class="c-navigation__list">
-                    <li class="l-sidebar__navigation-item c-navigation__item"> 
-                        <span class="l-sidebar__navigation-title">Personal</span> 
+                    <li class="l-sidebar__navigation-item c-navigation__item" (click) = "secondFirst($event,'1', 0)"  [ngClass]="{'selected': selected }"> 
+                        <span class="l-sidebar__navigation-title">Personal</span>  
                         <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoPersonal"></span>
                       </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item"> 
+                  <li class="l-sidebar__navigation-item c-navigation__item" (click) = "secondFirst($event, '2', 220)"  [ngClass]="{'selected': selected }" > 
                     <span class="l-sidebar__navigation-title">Physical Attributes</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoPersonal"></span>
                   </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item"> 
+                  <li class="l-sidebar__navigation-item c-navigation__item" (click) = "secondFirst($event, '2', 400)"  [ngClass]="{'selected': selected }" > 
                     <span class="l-sidebar__navigation-title">Qualification</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoSummary"></span>
                    </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item"> 
+                  <li class="l-sidebar__navigation-item c-navigation__item" (click) = "secondFirst($event, '2', 500)"  [ngClass]="{'selected': selected }"> 
                     <span class="l-sidebar__navigation-title">Occupation</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoExperience"></span>
                     </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item is-active" > 
+                  <li class="l-sidebar__navigation-item c-navigation__item is-active" (click) = "secondFirst($event, '2', 300)"  [ngClass]="{'selected': selected }" > 
                     <span class="l-sidebar__navigation-title">Hobbies</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoEducation"></span>
                     </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item"> 
+                  <li class="l-sidebar__navigation-item c-navigation__item" (click) = "secondFirst($event, '2', 300)"  [ngClass]="{'selected': selected }"> 
                     <span class="l-sidebar__navigation-title">Gotra</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoSkills"></span>
                      </li>
-                  <li class="l-sidebar__navigation-item c-navigation__item" data-section="languages" data-section-dynamic="true"> 
+                  <li class="l-sidebar__navigation-item c-navigation__item" data-section="languages" data-section-dynamic="true" (click) = "secondFirst($event, '2', 300)"  [ngClass]="{'selected': selected }"> 
                     <span class="l-sidebar__navigation-title">Email</span> 
                     <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoEnvelope"></span>
                     </li>
-                    <li class="l-sidebar__navigation-item c-navigation__item" data-section="languages" data-section-dynamic="true"> 
+                    <li class="l-sidebar__navigation-item c-navigation__item" data-section="languages" data-section-dynamic="true" (click) = "secondFirst($event, '2', 300)"  [ngClass]="{'selected': selected }" > 
                         <span class="l-sidebar__navigation-title">Family Details </span> 
                         <span class="l-sidebar__navigation-icon c-navigation__icon o-icon o-icon--bg o-icon--bg-white" data-icon="icoLanguages"></span>
                         </li>

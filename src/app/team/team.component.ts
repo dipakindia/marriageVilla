@@ -55,12 +55,12 @@ export class TeamComponent implements OnInit {
   }
   goToForm(){
     this.router.navigate(['biodata-information']);
-    let dialogRef = this.dialog.open(AddPersonalInfoComponent, {
+    /* let dialogRef = this.dialog.open(AddPersonalInfoComponent, {
       width: '100%',
       height: '100%',
       panelClass: 'full-width-popup',
       data: {  }
-    });
+    }); */
   }
 
   

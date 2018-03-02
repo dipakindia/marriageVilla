@@ -13364,7 +13364,7 @@ body.has-maintenance-modal * {
     background-color: #ff6d67
 }
 
-.panel__heading,
+/* .panel__heading,
 .c-panel-tip__heading {
     padding: 4px 15px;
     font-weight: normal;
@@ -13373,7 +13373,7 @@ body.has-maintenance-modal * {
     position: relative;
     margin-bottom:30px;
 }
-
+ */
 .panel__heading .left-wrapper,
 .c-panel-tip__heading .left-wrapper {
     float: left

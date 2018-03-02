@@ -15,9 +15,13 @@ export class AppComponent {
   name: string;
   display_name:string;
   userLoggedIn:boolean;
+  public url:any;
   constructor(public dialog: MatDialog,public router:Router,private authService: AuthService) {
     this.userLoggedIn = (sessionStorage.getItem('user_id') != '' && sessionStorage.getItem('user_id') != null) ? true : false;
     this.display_name = JSON.parse(sessionStorage.getItem('user_deatils'));
+    this.router.parseUrl(router.url)
+    this.url = router.parseUrl(router.url);
+    
   }
   signOut(): void {
     sessionStorage.clear();
