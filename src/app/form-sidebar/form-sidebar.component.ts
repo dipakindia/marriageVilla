@@ -6,7 +6,7 @@ import * as $ from 'jquery';
   styleUrls: ['./form-sidebar.component.css']
 })
 export class FormSidebarComponent implements OnInit {
-  selected:string;
+  selected:string = '1';
   constructor() { }
 
   ngOnInit() {
