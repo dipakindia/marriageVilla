@@ -22,23 +22,25 @@
                 </div>
 
                     <h3 class="heding-s">Recieve effective tips to grow your business</h3>
-                    <div class="form-sec2">
-                        <form action="" method="post" role="form" class="contactForm">
-                            <div class="row">
-                                <div class="col-sm-8">  
-                                    <div class="form-group">
-                                    <input type="email" class="form-control no-border" name="email" id="email"
-                                    placeholder="Enter Your Email for Subscribe us" data-rule="email" data-msg="Please enter a valid email"/>
+                    <div class="form-sec2">                 
+                            <div class="row">                                   
+                                <div class="col-sm-8">
+                                <div class="form-group">   
+                                    <span *ngIf ="msg" style="color: red;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ msg }}</span>
+                                    <span *ngIf ="success" style="color: green;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ success }}</span>    
+                    
+                                    <div class="col-md-3"></div>                                         
+                                    <input type="email" [(ngModel)] = "news_letter_text" class="form-control" placeholder="Please Enter Your Email Id">
                                     <div class="validation"></div>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
+                             <div class="col-sm-3">
                                     <div class="form-group">
-                                    <button class="button-medium" type="submit" name="contact">Submit </button>
-                                    </div>
+                                     <div class="col-md-3"></div>  
+                                    <button class="button-medium" type="submit" name="contact" (click)="submitNewsLetter()">Submit </button>
                                 </div>
                             </div>
-                        </form>
+                            </div>
                     </div>
                 </div>
 
