@@ -2172,3 +2172,8 @@ span.swirl_right_transparent{
     margin-bottom: 20px;
     font-weight: bold;
 }
+.loading {
+    padding: 30px;
+    text-align: center;
+    line-height: 50px;
+}

@@ -50,13 +50,16 @@ export class BlogComponent implements OnInit {
 //private apiUrl='http://localhost/wordpress4AngularJs/wp-json/wp/v2/posts';
   public data: any;
   public images:any = {};
+  public loading:boolean;
   //data:any[];
   //@Input() contact:any;                     //api call
 
   constructor (private data_service: DataService){
+    this.loading = true;
     this.data_service.getBlog().subscribe(data => {
       //alert(JSON.stringify(data))
       this.data = data;
+      this.loading = false;
     })
    }
 

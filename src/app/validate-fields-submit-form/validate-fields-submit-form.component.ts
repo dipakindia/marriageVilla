@@ -1,3 +1,5 @@
+import { LoadingFormComponent } from './../add-personal-info/loading-form';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
 import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,9 +18,10 @@ import {
 export class ValidateFieldsSubmitFormComponent implements OnInit {
   form: FormGroup;
   loading:boolean = false;
-  constructor(private data_service:DataService,private formBuilder: FormBuilder,private router: Router) {}
+  constructor(private data_service:DataService,private formBuilder: FormBuilder,private router: Router, public dialog: MatDialog) {}
 
   ngOnInit() {
+    localStorage.setItem('footer','no');
     this.form = this.formBuilder.group({
       name: [null, Validators.required],
       birth_palace: [null, Validators.required],
@@ -119,8 +122,14 @@ export class ValidateFieldsSubmitFormComponent implements OnInit {
       }
     }
     this.loading = true;
+    let dialogRef = this.dialog.open(LoadingFormComponent, {
+      width: '350px',
+      height: '350px',
+      data: ''
+    });
     this.data_service.addBioDataInformation(data).subscribe((res: Response) => {
       if(res.status == 1){
+        this.dialog.closeAll();
         this.router.navigate(['/payment']);
       }else{
         this.loading = false;

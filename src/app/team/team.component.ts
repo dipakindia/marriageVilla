@@ -30,7 +30,9 @@ export class TeamComponent implements OnInit {
     this.current_community = localStorage.getItem('set_community');
    }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    
+  }
   get getTemplateList(){
     var result = [];
     this.community.forEach(data => {
@@ -54,7 +56,7 @@ export class TeamComponent implements OnInit {
     });
   }
   goToForm(){
-    this.router.navigate(['biodata-information']);
+    this.router.navigate(['biodata-information'], { queryParams: { template: '10'}});
     /* let dialogRef = this.dialog.open(AddPersonalInfoComponent, {
       width: '100%',
       height: '100%',

@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { DialogOverviewExampleDialog } from './dialog/dialog.component';
 import { Component } from '@angular/core';
 import { AuthService } from 'angular4-social-login';
 
@@ -20,15 +19,15 @@ export class AppComponent {
     this.userLoggedIn = (sessionStorage.getItem('user_id') != '' && sessionStorage.getItem('user_id') != null) ? true : false;
     this.display_name = JSON.parse(sessionStorage.getItem('user_deatils'));
     this.router.parseUrl(router.url)
-    this.url = router.parseUrl(router.url);
-    
+    this.url = router.parseUrl(router.url).queryParams['template'];
+
   }
   signOut(): void {
     sessionStorage.clear();
     this.authService.signOut();
   }
   openDialog(): void {
-    let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    /* let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '60%',
       height: '70%',
       data: { name: this.name, animal: this.animal }
@@ -37,7 +36,7 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.animal = result;
-    });
+    }); */
   }
   gotologin($event){
     this.router.navigate(['/login']);

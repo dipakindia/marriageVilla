@@ -13,7 +13,6 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     $('.slick-track').slick({
       centerPadding: '0px',
-      //appendArrows: '.slick-track',
       appendArrows: ('.slick-arrows'),
       infinite: true,
       slidesToShow: 1,
@@ -31,7 +30,7 @@ export class SliderComponent implements OnInit {
     });
   }
 
-  slides = [
+  /* slides = [
     { img: 'http://placehold.it/350x150/000000' },
     { img: 'http://placehold.it/350x150/111111' },
     { img: 'http://placehold.it/350x150/222222' },
@@ -51,5 +50,5 @@ export class SliderComponent implements OnInit {
 
   afterChange(e) {
     console.log('afterChange', e);
-  }
+  } */
 }

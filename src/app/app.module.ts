@@ -1,3 +1,4 @@
+import { LoadingFormComponent } from './add-personal-info/loading-form';
 import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
 import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
 import { DataService } from './data.service';
@@ -10,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule, MatChipsModule, MatCheckboxModule, MatNativeDateModule, MatDatepickerModule, MatSnackBarModule, MatSelectModule, MatInputModule, MatOptionModule, MatDialogModule, MatTooltipModule, MatSlideToggleModule, MatTabsModule, MatProgressSpinnerModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { AppComponent } from './app.component';
-import { DialogComponent, DialogOverviewExampleDialog } from './dialog/dialog.component';
+import { CommunityDialog } from './dialog/dialog.component';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectTemplateDialogComponent } from './select-template-dialog/select-template-dialog.component';
@@ -64,8 +65,8 @@ let config = new AuthServiceConfig([
 
 @NgModule({
   declarations: [
-    AppComponent, DialogComponent, DialogOverviewExampleDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
-    FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, 
+    AppComponent, CommunityDialog, SelectTemplateDialogComponent, AddPersonalInfoComponent,
+    FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, LoadingFormComponent,
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
     NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent, HinduComponent,FieldErrorDisplayComponent,
     IslamComponent, SikhComponent, ChristianComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent, SliderComponent
@@ -86,7 +87,7 @@ let config = new AuthServiceConfig([
   ],
   providers: [FormBuilder,DataService],
   entryComponents: [
-    DialogOverviewExampleDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent,PreviewTemplateComponent
+    CommunityDialog,SelectTemplateDialogComponent,AddPersonalInfoComponent,PreviewTemplateComponent,LoadingFormComponent
   ],
   bootstrap: [AppComponent]
 })

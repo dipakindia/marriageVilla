@@ -26,9 +26,8 @@
       </li> 
       </ul>
   </nav>
-  {{ url }}
   <!--<model-form></model-form>-->
   <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <app-footer *ngIf = "footer != 'no'"></app-footer>
 </div>
 

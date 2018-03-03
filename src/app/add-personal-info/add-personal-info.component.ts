@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPersonalInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    localStorage.setItem('footer','no');
+   }
 
   ngOnInit() {
   }
-
+  ngOnDestroy(){
+    localStorage.setItem('footer','yes');
+  }
 }
