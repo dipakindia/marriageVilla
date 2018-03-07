@@ -108,10 +108,10 @@
                         </app-field-error-display>
                       </div>
                     </div>
-
+                <div class="panel panel" *ngIf = "com != 'christian' "> 
                     <div class="panel__heading"> Religion: </div>
-                    <div class="form-group" [ngClass]="displayFieldCss('cast')">
-                        <div class="col-sm-12">
+                    <div class="form-group" [ngClass]="displayFieldCss('cast')" *ngIf = "com == 'hindu' || com == 'muslim' || com == 'sikh'">
+                        <div class="col-sm-12" >
                           <label for="cast" class="control-label required">Caste</label>
                           <input type="text" id="cast" class="form-control" formControlName="cast">
                           <app-field-error-display [displayError]="isFieldValid('cast')" errorMsg="Please inform your cast">
@@ -119,26 +119,26 @@
                         </div>
                       </div>
 
-                      <div class="form-group" [ngClass]="displayFieldCss('sub_cast')">
-                          <div class="col-sm-12">
-                            <label for="sub_cast" class="control-label required">Hobbies</label>
+                      <div class="form-group" [ngClass]="displayFieldCss('gotra')" *ngIf = "com == 'hindu' || com == 'sikh'">
+                          <div class="col-sm-12" >
+                            <label for="gotra" class="control-label required">Gotra</label>
+                            <input type="text" id="gotra" class="form-control" formControlName="gotra">
+                            <app-field-error-display [displayError]="isFieldValid('gotra')" errorMsg="Please inform your gotra">
+                            </app-field-error-display>
+                          </div>
+                        </div> 
+
+                      <div class="form-group" [ngClass]="displayFieldCss('sub_cast')" *ngIf = "com == 'muslim'">
+                          <div class="col-sm-12" >
+                            <label for="sub_cast" class="control-label required">Sub Caste</label>
                             <input type="text" id="sub_cast" class="form-control" formControlName="sub_cast">
                             <app-field-error-display [displayError]="isFieldValid('sub_cast')" errorMsg="Please inform your sub_cast">
                             </app-field-error-display>
                           </div>
-                        </div>
+                        </div>                   
 
-                        <div class="form-group" [ngClass]="displayFieldCss('gotra')">
-                            <div class="col-sm-12">
-                              <label for="gotra" class="control-label required">Gotra</label>
-                              <input type="text" id="gotra" class="form-control" formControlName="gotra">
-                              <app-field-error-display [displayError]="isFieldValid('gotra')" errorMsg="Please inform your gotra">
-                              </app-field-error-display>
-                            </div>
-                          </div>
-
-                          <div class="form-group" [ngClass]="displayFieldCss('maththab')">
-                              <div class="col-sm-12">
+                          <div class="form-group" [ngClass]="displayFieldCss('maththab')" *ngIf = "com == 'muslim'">
+                              <div class="col-sm-12"  >
                                 <label for="maththab" class="control-label required">Maththab</label>
                                 <input type="text" id="maththab" class="form-control" formControlName="maththab">
                                 <app-field-error-display [displayError]="isFieldValid('maththab')" errorMsg="Please inform your maththab">
@@ -146,48 +146,75 @@
                               </div>
                             </div>
 
-                            <div class="form-group" [ngClass]="displayFieldCss('speak_urdu')">
-                                <div class="col-sm-12">
+                            <div class="form-group" [ngClass]="displayFieldCss('speak_urdu')"  *ngIf = "com == 'muslim'">
+                                <div class="col-sm-12" >
                                   <label for="speak_urdu" class="control-label required">Speak urdu</label>
                                   <input type="text" id="speak_urdu" class="form-control" formControlName="speak_urdu">
                                   <app-field-error-display [displayError]="isFieldValid('speak_urdu')" errorMsg="Please inform your speak_urdu">
                                   </app-field-error-display>
                                 </div>
                               </div>
-                              <div class="form-group" [ngClass]="displayFieldCss('namaz')">
-                                  <div class="col-sm-12">
+                              <div class="form-group" [ngClass]="displayFieldCss('namaz')"  *ngIf = "com == 'muslim'">
+                                  <div class="col-sm-12" >
                                     <label for="namaz" class="control-label required">Namaz</label>
                                     <input type="text" id="namaz" class="form-control" formControlName="namaz">
                                     <app-field-error-display [displayError]="isFieldValid('namaz')" errorMsg="Please inform your namaz">
                                     </app-field-error-display>
                                   </div>
                               </div> 
-                              <div class="form-group" [ngClass]="displayFieldCss('fasting')">
-                                  <div class="col-sm-12">
+                              <div class="form-group" [ngClass]="displayFieldCss('fasting')" *ngIf = "com == 'muslim'">
+                                  <div class="col-sm-12" >
                                     <label for="fasting" class="control-label required">Fasting</label>
                                     <input type="text" id="fasting" class="form-control" formControlName="fasting">
                                     <app-field-error-display [displayError]="isFieldValid('fasting')" errorMsg="Please inform your fasting">
                                     </app-field-error-display>
                                   </div>
                                 </div> 
-                                <div class="form-group" [ngClass]="displayFieldCss('hijab_after_marriage')">
-                                    <div class="col-sm-12">
-                                      <label for="hijab_after_marriage" class="control-label required">hijab after marriage</label>
+                                <div class="form-group" [ngClass]="displayFieldCss('hijab_after_marriage')"  *ngIf = "com == 'muslim'">
+                                    <div class="col-sm-12" >
+                                      <label for="hijab_after_marriage" class="control-label required">Hijab after marriage</label>
                                       <input type="text" id="hijab_after_marriage" class="form-control" formControlName="hijab_after_marriage">
                                       <app-field-error-display [displayError]="isFieldValid('hijab_after_marriage')" errorMsg="Please inform your hijab_after_marriage">
                                       </app-field-error-display>
                                     </div>
                                   </div>
-                                  <div class="form-group" [ngClass]="displayFieldCss('quran')">
-                                      <div class="col-sm-12">
-                                        <label for="quran" class="control-label required">quran</label>
+                                  <div class="form-group" [ngClass]="displayFieldCss('quran')" *ngIf = "com == 'muslim'">
+                                      <div class="col-sm-12" >
+                                        <label for="quran" class="control-label required">Quran</label>
                                         <input type="text" id="quran" class="form-control" formControlName="quran">
                                         <app-field-error-display [displayError]="isFieldValid('quran')" errorMsg="Please inform your quran">
                                         </app-field-error-display>
                                       </div>
                                     </div>
-                    <div class="panel__heading"> Occupation: </div>       
+                                   
+                          
+                   </div>
 
+                   <div class="panel panel" *ngIf = "com == 'christian'"> 
+                      <div class="panel__heading"> Beliefs: </div>
+                      <div class="form-group" [ngClass]="displayFieldCss('name_of_the_church')">
+                          <div class="col-sm-12">
+                            <label for="cast" class="control-label required">Name of The Church</label>
+                            <input type="text" id="name_of_the_church" class="form-control" formControlName="name_of_the_church">
+                            <app-field-error-display [displayError]="isFieldValid('name_of_the_church')" errorMsg="Please inform your name_of_the_church">
+                            </app-field-error-display>
+                          </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="displayFieldCss('caste_preference')">
+                            <div class="col-sm-12">
+                              <label for="caste_preference" class="control-label required">Caste Preference</label>
+                              <input type="text" id="caste_preference" class="form-control" formControlName="caste_preference">
+                              <app-field-error-display [displayError]="isFieldValid('caste_preference')" errorMsg="Please inform your caste_preference">
+                              </app-field-error-display>
+                            </div>
+                          </div> 
+
+
+                  </div>      
+
+
+                    <div class="panel__heading"> Occupation: </div>      
                     <div class="form-group" [ngClass]="displayFieldCss('occupation')">
                         <div class="col-sm-12">
                           <label for="occupation" class="control-label required">Occupation</label>
@@ -197,7 +224,8 @@
                         </div>
                       </div> 
                   
-                 <div class="panel__heading"> Family Details: </div>
+                
+                      <div class="panel__heading"> Family Details: </div>
                       <div class="form-group" [ngClass]="displayFieldCss('father')">
                           <div class="col-sm-12">
                             <label for="father" class="control-label required">Father</label>

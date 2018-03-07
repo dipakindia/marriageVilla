@@ -380,6 +380,7 @@ span.swirl_right{
 	height:auto;
 	min-height: 500px;
 	position: relative;
+	background-color: #DDE;
 }
 .slider_trans_black{
 	position:absolute;

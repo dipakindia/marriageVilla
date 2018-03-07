@@ -18,9 +18,11 @@ import {
 export class ValidateFieldsSubmitFormComponent implements OnInit {
   form: FormGroup;
   loading:boolean = false;
+  public com : string;
   constructor(private data_service:DataService,private formBuilder: FormBuilder,private router: Router, public dialog: MatDialog) {}
 
   ngOnInit() {
+    this.com = localStorage.getItem('set_community');
     localStorage.setItem('footer','no');
     this.form = this.formBuilder.group({
       name: [null, Validators.required],
@@ -49,6 +51,8 @@ export class ValidateFieldsSubmitFormComponent implements OnInit {
       brother: [null, Validators.required],
       sister: [null, Validators.required],
       phone_no: [null, Validators.required],
+      name_of_the_church: [null, Validators.required],
+      caste_preference: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
      /* address: this.formBuilder.group({
         street: [null, Validators.required],
