@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { Component } from '@angular/core';
 import { AuthService } from 'angular4-social-login';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +15,7 @@ export class AppComponent {
   display_name:string;
   userLoggedIn:boolean;
   public url:any;
-  constructor(public dialog: MatDialog,public router:Router,private authService: AuthService) {
+  constructor(public dialog: MatDialog,private location: Location,public router:Router,private authService: AuthService) {
     this.userLoggedIn = (sessionStorage.getItem('user_id') != '' && sessionStorage.getItem('user_id') != null) ? true : false;
     this.display_name = JSON.parse(sessionStorage.getItem('user_deatils'));
     this.router.parseUrl(router.url)
@@ -25,6 +25,7 @@ export class AppComponent {
   signOut(): void {
     sessionStorage.clear();
     this.authService.signOut();
+    location.reload()
   }
   openDialog(): void {
     /* let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {

@@ -1,3 +1,4 @@
+import { MyAccountComponent } from './my-account/my-account.component';
 import { SliderComponent } from './slider/slider.component';
 import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
 import { SikhComponent } from './team/common/sikh/sikh.component';
@@ -37,6 +38,7 @@ export const routes: Routes = [
     {path: 'terms', component: TermsComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'silder', component: SliderComponent},
+    {path: 'my-account', component: MyAccountComponent},
     {path: 'biodata-information', component: AddPersonalInfoComponent},
     {path: '504', component: ServerErrorComponent},
     {path: '**', component: PageNotFoundComponent},

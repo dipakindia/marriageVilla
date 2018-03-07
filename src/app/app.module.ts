@@ -50,6 +50,7 @@ import { ChristianComponent } from './team/common/christian/christian.component'
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { SliderComponent } from './slider/slider.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
  /*for social login */
 let config = new AuthServiceConfig([
@@ -69,7 +70,7 @@ let config = new AuthServiceConfig([
     FormSidebarComponent, FormContentComponent,LoginComponent,HomeComponent,ServerErrorComponent,PageNotFoundComponent, LoadingFormComponent,
     FooterComponent, AboutUsComponent, BlogComponent, ContactUsComponent, TeamComponent, BiodataComponent,PreviewTemplateComponent,
     NewsLetterComponent, ModelFormComponent, BlogDetailPageComponent, PaymentTemplateComponent, SignupComponent, HinduComponent,FieldErrorDisplayComponent,
-    IslamComponent, SikhComponent, ChristianComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent, SliderComponent
+    IslamComponent, SikhComponent, ChristianComponent, TermsComponent, PrivacyPolicyComponent,ValidateFieldsSubmitFormComponent, SliderComponent, MyAccountComponent
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,MatRadioModule, MatProgressBarModule, MatAutocompleteModule, MatListModule,

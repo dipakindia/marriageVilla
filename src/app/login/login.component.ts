@@ -5,6 +5,7 @@ import {ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, Fo
 import { AuthService } from "angular4-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-login";
 import { SocialUser } from "angular4-social-login";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +21,12 @@ export class LoginComponent implements OnInit {
   private user: SocialUser;
   private loggedIn: boolean;
 
-  constructor(private data_service: DataService, 
-    public router: Router, private authService: AuthService) { }
+  constructor(private data_service: DataService, private location: Location,
+    public router: Router, private authService: AuthService) {
+      if(sessionStorage.getItem('token_id')){
+        router.navigate(['/my-account'])
+      }
+     }
 
     signInWithGoogle(): void {
       this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
@@ -53,7 +58,8 @@ export class LoginComponent implements OnInit {
             sessionStorage.setItem('token_id',result['user_deatils'].token_id);
             sessionStorage.setItem('user_id',result['user_deatils'].user_id );
             sessionStorage.setItem('user_deatils', JSON.stringify(result['user_deatils']));
-            this.router.navigate(['/home'])
+            location.reload()
+            //this.router.navigate(['/home'])
           }else{
             this.error = result['msg'];
             
@@ -73,7 +79,8 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token_id',result['user_deatils'].token_id);
         sessionStorage.setItem('user_id',result['user_deatils'].user_id );
         sessionStorage.setItem('user_deatils', JSON.stringify(result['user_deatils']));
-        this.router.navigate(['/home'])
+        location.reload()
+        //this.router.navigate(['/home'])
       }else{
         this.error = result['msg'];
         
