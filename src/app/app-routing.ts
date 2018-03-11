@@ -1,3 +1,4 @@
+import { CommunityDialog } from './dialog/dialog.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { SliderComponent } from './slider/slider.component';
 import { ValidateFieldsSubmitFormComponent } from './validate-fields-submit-form/validate-fields-submit-form.component';
@@ -42,6 +43,7 @@ export const routes: Routes = [
     {path: 'biodata-information', component: AddPersonalInfoComponent},
     {path: '504', component: ServerErrorComponent},
     {path: '**', component: PageNotFoundComponent},
+    
    
 ];
 

@@ -8,9 +8,21 @@ import * as $ from 'jquery';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  count:number = 1;
+  currentSlide:number = 1;
+  constructor() {
+
+   }
 
   ngOnInit() {
+    setInterval(() => {
+      if(this.currentSlide == 3){
+        this.currentSlide = 1;
+      }else{
+        this.currentSlide++;
+      }
+      }, 5000);
+
     $('.slick-track').slick({
       centerPadding: '0px',
       appendArrows: ('.slick-arrows'),
