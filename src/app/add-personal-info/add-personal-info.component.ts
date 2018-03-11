@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-personal-info.component.css']
 })
 export class AddPersonalInfoComponent implements OnInit {
-
-  constructor() {
+  userInfo:any;
+  constructor(  public router: Router) { 
+    this.userInfo = JSON.parse(sessionStorage.getItem('user_deatils'));
+    if(!this.userInfo){
+      router.navigate(['/login'])
+    }
     localStorage.setItem('footer','no');
    }
 

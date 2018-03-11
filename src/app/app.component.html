@@ -19,7 +19,7 @@
           </li> 
           <li class="my-account" *ngIf = "userLoggedIn" >
             <button mat-button [matMenuTriggerFor]="menu">My Account</button>
-            <mat-menu #menu="matMenu">
+            <mat-menu #menu="matMenu" class="my-profile">
             <button mat-menu-item >Welcome! {{ display_name.name }}</button>
             <button mat-menu-item (click) = "signOut($event)">Logout</button>
             </mat-menu>

@@ -87437,3 +87437,42 @@ button.Zebra_DatePicker_Icon:focus {
 .silder-1 img {
     width: 100%;
 }
+.my-profile {
+    position: relative;
+    top: 55px;
+}
+.biodata table {
+    border-collapse: collapse;
+    background-color: transparent;
+    border: 2px solid #999;
+    width: 1200px;
+    margin: 50px auto;
+}
+.biodata tr { float:none; }
+.biodata th {
+    text-align: left;
+    padding: 10px 15px;
+    margin: 0;
+    background: #999;
+    color: #fff;
+    font-size: 15px;
+    font-family: calibri;
+    font-weight: normal;
+}
+.biodata tr td {
+    width: auto !important;
+    padding: 10px 15px;
+}
+.biodata tr:nth-child(odd) td {
+    background: #f1f1f1;
+}
+.biodata tr:nth-child(even) td {
+    background: #fcfcfc;
+}
+table.user-info {
+    margin: 30px auto;
+}
+table.user-info td {
+    margin: 10px;
+    padding: 5px 20px;
+}

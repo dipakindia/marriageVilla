@@ -44,6 +44,13 @@ export class DataService {
   getSingleBlog(blog_id){
     return this._http.get(environment.blog_url+'posts/'+blog_id).map(data =>data);
   }
+  getBioDataList(data){
+    var uid = data.uid;
+    console.log(data)
+    const myheader = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    const body = new HttpParams().set('action','get_biodata_info').set('uid',uid);
+    return this._http.post(environment.api_url, body,{headers:myheader});
+  }
   /*getImage(imageId){
     return this._http.get(environment.blog_url+'media/'+imageId).map(dt =>dt);
   }*/
