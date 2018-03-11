@@ -42,10 +42,10 @@
     <!-- <tr *ngIf = "data.biodata_list === undefined">
             <td colspan="6">Loading...........!!</td>
         </tr> -->
-    <tr *ngIf = "data.biodata_list.length == 0">
+    <tr *ngIf = "data?.biodata_list.length == 0">
             <td colspan="6">No record Found!!</td>
         </tr>
-    <tr *ngFor = "let list of data.biodata_list">
+    <tr *ngFor = "let list of data?.biodata_list">
             <td>{{ list.id }}</td>
             <td>{{ getTitle(list.data).name }}</td>
             <td>Hindu : 2 </td>
