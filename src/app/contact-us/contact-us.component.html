@@ -22,14 +22,15 @@
                 </div>
 
                     <h3 class="heding-s">Recieve effective tips to grow your business</h3>
+
+                    <span *ngIf ="msg" style="color: red;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ msg }}</span>
+                    <span *ngIf ="success" style="color: green;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ success }}</span>    
+              
                     <div class="form-sec2">                 
                             <div class="row">                                   
                                 <div class="col-sm-8">
                                 <div class="form-group">   
-                                    <span *ngIf ="msg" style="color: red;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ msg }}</span>
-                                    <span *ngIf ="success" style="color: green;border-radius: 3px;display:  inline-block;margin-bottom: 10px;">{{ success }}</span>    
-                    
-                                    <div class="col-md-3"></div>                                         
+                                     <div class="col-md-3"></div>                                         
                                     <input type="email" [(ngModel)] = "news_letter_text" class="form-control" placeholder="Please Enter Your Email Id">
                                     <div class="validation"></div>
                                     </div>
