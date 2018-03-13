@@ -25,8 +25,13 @@ a, blockquote, span.love_quote, h1 span, h2 span, h3 span, h4 span, h5 span, h6 
     border:1px solid #d75c57;}
     .no-touch .back:hover, .countdown_container, a.thumb_read_more, .full_width_carousel .left14 h3, .full_width_carousel .left14_last h3, input.form_submit_contact, input[type="checkbox"] + label:before, input[type="checkbox"]:checked + label:before
     {background-color:#ECAB3D }
-    
-    
+    a.thumb_read_more:hover{
+        background: #d75c57;
+        text-decoration: none;
+        color: #fff;
+
+    }
+    .left12_first, .left12_last{ margin-bottom: 0px !important;}
     .tp-title span:nth-child(2), .tp-title:hover, .page_header_title a, .title span, .title_under, ul#main_menu li a.selected, ul#main_menu li a:hover, span.carousel_titles{
     color:#d75c57;}
     

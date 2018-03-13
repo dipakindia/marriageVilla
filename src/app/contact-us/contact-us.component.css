@@ -17,7 +17,7 @@
     text-align: center;
 }
 .heding-s {
-    font-size: 19px;
+    font-size: 12px;
     margin-bottom: 5px;
 }
  .h3 {
@@ -114,7 +114,11 @@ button.button-medium {
     border-radius: 0 5px 5px 0;
 }
 .heding-s{
-    font-size: 22px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.heding-d{
+    font-size: 15px;
     margin: 10px 0;
 }
 .sec2 {

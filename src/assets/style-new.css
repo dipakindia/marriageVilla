@@ -87476,3 +87476,11 @@ table.user-info td {
     margin: 10px;
     padding: 5px 20px;
 }
+.page-title h1 {
+		font: bold 49px calibri;
+		text-shadow: 1px 4px 10px #000;
+	}
+	.page-title.text-center.uppercase {
+		width: 100%;
+		margin-top: 30px;
+	}
