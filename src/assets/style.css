@@ -644,6 +644,7 @@ a.thumb_read_more{
 	color:#FFFFFF;
 	padding:15px 0;
 	z-index: 999;
+	cursor: pointer;
 }
 a.thumb_read_more:hover{
 	background-color:#5d594d;

@@ -4,15 +4,16 @@
 }
 .signup-newsletter input {
     height: 50px;
-    width: 270px !important;
+    /*width: 270px !important;*/
 }
 .signup-newsletter button {
     height: 50px;
-    width: 170px;
+    /*width: 170px;*/
 }
 .newslettr-title{
     margin-bottom: 28px;
-    font-size: 27px;
+    font-size: 30px calibri;
+    text-shadow: 1px 1px 1px #000;
 }
 .footer-ct1 {
     padding: 40px 0;
