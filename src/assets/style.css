@@ -643,6 +643,7 @@ a.thumb_read_more{
 	text-align:center;
 	color:#FFFFFF;
 	padding:15px 0;
+	z-index: 999;
 }
 a.thumb_read_more:hover{
 	background-color:#5d594d;

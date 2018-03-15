@@ -1,3 +1,25 @@
 .slider-1 {
     width: 100%;
 }
+.slick-arrows {
+    position: relative;
+    bottom: 35px;
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    z-index: 9999;
+}
+.slick-arrows span {
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    z-index: 9999999999999999999;
+    float: left;
+    margin: 5px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #d75c57
+}
+.slick-arrows span.active {
+    background: #d75c57 !important;
+}
