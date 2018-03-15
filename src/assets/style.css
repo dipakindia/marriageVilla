@@ -258,7 +258,8 @@ ul#main_menu {
     margin: 0;
     padding: 0px;
     width: 660px;
-    float: right;
+	float: right;
+	margin-right: 150px;
 }
 ul#main_menu *{
 	margin:0;

@@ -38,7 +38,7 @@
 .footer_social ul li a {
     border: 1px solid #fff;
     background: transparent;
-    border-radius: 22px;
+    border-radius: 0;
     box-shadow: 0 0 0 7px transparent;
     color: #fff;
     display: block;

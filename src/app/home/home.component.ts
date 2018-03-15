@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { LoadingFormComponent } from './../add-personal-info/loading-form';
 import { MatDialog } from '@angular/material';
 import { CommunityDialog } from './../dialog/dialog.component';
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   public data: any;
   public images:any = {};
 
-  constructor( private data_service: DataService,public dialog: MatDialog) {
+  constructor( private data_service: DataService,public dialog: MatDialog,public router: Router) {
     this.data_service.getBlog().subscribe(data => {
       this.data = data;
     })
@@ -27,6 +28,10 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+  }
+  setCommunity(event, vt){
+    localStorage.setItem('set_community',vt)
+    this.router.navigate(['/select-template']);
   }
   onSubmit() {
     let dialogRef = this.dialog.open(CommunityDialog, {
