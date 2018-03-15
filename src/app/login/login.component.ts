@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
         userData['email'] = user.email;
         userData['social_key'] = 'gplus';
         userData['social_id'] = user.id;
-        alert("Social Login")
+        //alert("Social Login")
         this.data_service.userSocialLogin(userData).subscribe(result => { 
           console.log(result);
 

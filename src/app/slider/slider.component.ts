@@ -21,7 +21,7 @@ export class SliderComponent implements OnInit {
       }else{
         this.currentSlide++;
       }
-      }, 5000);
+      }, 50000000);
 
     $('.slick-track').slick({
       centerPadding: '0px',
@@ -41,7 +41,9 @@ export class SliderComponent implements OnInit {
       $('.slick-track').slick("slickNext");
     });
   }
-
+ activeSilde(val){
+  this.currentSlide = val;
+ }
   /* slides = [
     { img: 'http://placehold.it/350x150/000000' },
     { img: 'http://placehold.it/350x150/111111' },

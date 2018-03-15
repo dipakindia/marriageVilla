@@ -7,8 +7,26 @@
 </section> -->
 <section class="home-section">
   <div class="silder-custom">
-    <div class="silder-1" *ngIf = "currentSlide == '1'"><img src="assets/images/slider/slide1.jpg" alt="Slider 1" /> <div class="slick-arrows"></div></div>
-    <div class="silder-1" *ngIf = "currentSlide == '2'"><img src="assets/images/slider/slide2.jpg" alt="Slider 2" /> <div class="slick-arrows"></div></div>
-    <div class="silder-1" *ngIf = "currentSlide == '3'"><img src="assets/images/slider/slide3.jpg" alt="Slider 3" /> <div class="slick-arrows"></div></div>
+    <div class="silder-1" *ngIf = "currentSlide == '1'"><img src="assets/images/slider/slide1.jpg" alt="Slider 1" /> 
+      <div class="slick-arrows">
+        <span class="active"></span>
+        <span (click) = "activeSilde(2)"></span>
+        <span (click) = "activeSilde(3)"></span>
+      </div>
+    </div>
+    <div class="silder-1" *ngIf = "currentSlide == '2'"><img src="assets/images/slider/slide2.jpg" alt="Slider 2" /> 
+      <div class="slick-arrows">
+        <span (click) = "activeSilde(1)"></span>
+        <span class="active"></span>
+        <span (click) = "activeSilde(3)"></span>
+      </div>
+    </div>
+    <div class="silder-1" *ngIf = "currentSlide == '3'"><img src="assets/images/slider/slide3.jpg" alt="Slider 3" /> 
+      <div class="slick-arrows">
+        <span (click) = "activeSilde(1)"></span>
+        <span (click) = "activeSilde(2)"></span>
+        <span class="active"></span>
+      </div>
+    </div>
   </div>
 </section>
