@@ -28,6 +28,21 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+    (function () {
+      var $car = $('.horse-car');
+      var $wheel = $('.round');
+
+      var $win = $(window);
+
+      $win.bind('scroll', function () {
+        var to = $win.scrollTop() / 5;  // if u want to change spreed //
+        $car.css('transform', 'translateX(' + to + 'px)');
+
+        var to = $win.scrollTop() / 3;  // if u want to change spreed //
+        $wheel.css('transform', 'rotate(' + to + 'deg)');
+      });
+  }());
+
   }
   setCommunity(event, vt){
     localStorage.setItem('set_community',vt)
