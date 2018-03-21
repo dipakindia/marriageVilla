@@ -94,12 +94,12 @@
     text-align: center;
 }
 .names_titles {
-    color: #ecab1a;
+    color: #E34365;
     display: block;
     width: 100%;
     text-align: center;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -1px;
     padding: 0 0 10px 0;
 }
@@ -188,6 +188,8 @@
     clear: both;
     text-align: center;
 }
+
+
 
 .horse-car {
     position: relative;

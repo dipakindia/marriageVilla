@@ -35,10 +35,10 @@ export class HomeComponent implements OnInit {
       var $win = $(window);
 
       $win.bind('scroll', function () {
-        var to = $win.scrollTop() / 5;  // if u want to change spreed //
+        var to = $win.scrollTop() / 10;  // if u want to change spreed //
         $car.css('transform', 'translateX(' + to + 'px)');
 
-        var to = $win.scrollTop() / 3;  // if u want to change spreed //
+        var to = $win.scrollTop() / 6;  // if u want to change spreed //
         $wheel.css('transform', 'rotate(' + to + 'deg)');
       });
   }());
