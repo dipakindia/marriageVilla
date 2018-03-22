@@ -1,8 +1,12 @@
 li.my-account {
     border: 1px solid #000;
-    padding: 0px 16px !important;
+    /*padding: 0px 16px !important;*/
     float: right;
     margin: 10px 30px !important;
     color: #000;
     border-radius: 2px;
 }       
+
+.mat-button{
+    padding: 2px 5px !important;
+}
